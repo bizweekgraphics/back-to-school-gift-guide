@@ -1,0 +1,104 @@
+@-webkit-keyframes rotation {
+	from {
+	}
+	to {
+	}
+}
+@-moz-keyframes rotation {
+	from {
+	}
+	to {
+	}
+}
+@-o-keyframes rotation {
+	from {
+	}
+	to {
+	}
+}
+@keyframes rotation {
+	from {
+		//Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: rotate(0deg);
+	}
+	to {
+		//Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: rotate(359deg);
+	}
+}
+
+@-webkit-keyframes buffering-stripes {
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: 30px 0;
+	}
+}
+@-moz-keyframes buffering-stripes {
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: 30px 0;
+	}
+}
+@-ms-keyframes buffering-stripes {
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: 30px 0;
+	}
+}
+@-o-keyframes buffering-stripes {
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: 30px 0;
+	}
+}
+@keyframes buffering-stripes {
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: 30px 0;
+	}
+}
+
+@-moz-keyframes spin {
+	0% {
+	}
+	100% {
+	}
+}
+@-webkit-keyframes spin {
+	0% {
+	}
+	100% {
+	}
+}
+@-o-keyframes spin {
+	0% {
+	}
+	100% {
+	}
+}
+@-ms-keyframes spin {
+	0% {
+	}
+	100% {
+	}
+}
+@keyframes spin {
+	0% {
+		//Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: rotate(0deg);
+	}
+	100% {
+		//Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: rotate(359deg);
+	}
+}

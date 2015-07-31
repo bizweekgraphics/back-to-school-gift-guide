@@ -1,0 +1,112 @@
+//@font-face
+
+@charset "UTF-8";
+@font-face {
+  font-family: $font_0;
+  src: $url_0 format("eot"), $url_1 format("woff"), $url_2 format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: $font_1;
+  src: $url_3 format("eot"), $url_4 format("woff"), $url_5 format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: $font_2;
+  src: $url_6 format("eot"), $url_7 format("woff"), $url_8 format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: $font_3;
+  src: $url_9;
+  src: $url_10, $url_11 format('woff'), $url_12 format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: $font_4;
+  src: $url_42;
+  src: $url_43 format('embedded-opentype'), $url_44 format('woff'), $url_45 format('truetype'), $url_46 format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/////
+
+body {
+  @include font-feature-settings("kern", "liga", "pnum");
+  -webkit-font-smoothing: antialiased;
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font-family;
+  font-size: $base-font-size;
+  line-height: $heading-line-height;
+  margin: 0 0 $small-spacing;
+}
+
+h2 {
+  @extend %extend_3;
+}
+h3 {
+  @extend %extend_3;
+}
+h4 {
+  @extend %extend_3;
+}
+h6 {
+  @extend %extend_3;
+  @extend %extend_3;
+}
+
+p {
+  margin: 0 0 $small-spacing;
+}
+
+a {
+  color: $action-color;
+  text-decoration: none;
+  transition: color 0.1s linear;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: darken($action-color, 15%);
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+hr {
+  border-bottom: $base-border;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: $base-spacing 0;
+}
+
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+}

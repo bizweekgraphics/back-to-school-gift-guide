@@ -1,0 +1,90 @@
+@media(-webkit-min-device-pixel-ratio: 1.25),(min-resolution: 120dpi) {
+	.retina-logo {
+		display: block !important;
+	}
+	.tweet_list {
+		background-image: $url_21;
+		background-size: 291px 245px;
+	}
+	.video-embedded {
+		&.loading {
+			background-image: $url_22;
+			background-size: 32px 32px;
+		}
+		.vem-play {
+			background-image: $url_27 !important;
+			background-size: 49px 98px !important;
+		}
+	}
+	.fancybox-close {
+		background-image: $url_24 !important;
+		background-size: 151px 50px;
+	}
+	#main-cart {
+		background-image: $url_25 !important;
+		background-size: 92px 25px !important;
+	}
+	#main-cart-divider {
+		background-image: $url_25 !important;
+		background-size: 92px 25px !important;
+	}
+	.mejs-overlay-button {
+		background-image: $url_27 !important;
+		background-size: 49px 98px !important;
+	}
+	.no-svg {
+		.mejs-overlay-button {
+			background-image: $url_27 !important;
+			background-size: 49px 98px !important;
+		}
+		.mejs-controls .mejs-button button {
+			background-image: $url_28 !important;
+			background-size: 110px 60px !important;
+		}
+	}
+	.mejs-controls {
+		.mejs-volume-button .mejs-volume-slider .mejs-volume-handle {
+			background-image: $url_28 !important;
+			background-size: 110px 60px !important;
+		}
+		.mejs-time-rail .mejs-time-handle {
+			background-image: $url_28 !important;
+			background-size: 110px 60px !important;
+		}
+		.mejs-horizontal-volume-slider .mejs-horizontal-volume-handle {
+			background-image: $url_28 !important;
+			background-size: 110px 60px !important;
+		}
+		.mejs-button button {
+			background-image: $url_28 !important;
+			background-size: 110px 60px !important;
+		}
+	}
+	.niyt {
+		background-image: $url_28 !important;
+		background-size: 110px 60px !important;
+	}
+	span.customSelect {
+		background-image: $url_18;
+		background-size: 34px 50px;
+	}
+	.fancybox-thumb span {
+		background-image: $url_23 !important;
+		background-size: 38px 38px;
+	}
+	#fancybox-loading div {
+		background-image: $url_22 !important;
+		background-size: 32px 32px;
+	}
+	.fancybox-nav span {
+		background-image: $url_24 !important;
+		background-size: 151px 50px;
+	}
+	.mejs-overlay-loading span {
+		background-image: $url_26 !important;
+		background-size: 32px 32px !important;
+	}
+	.mejs-overlay:hover .mejs-overlay-button {
+		background-position: 0 -70px !important;
+	}
+}

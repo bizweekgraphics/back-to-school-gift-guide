@@ -1,0 +1,895 @@
+@media screen and (min-width: 1280px) {
+  #hero-zero .big-header {
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .feature-top {
+    left: 68%;
+  }
+
+  #header {
+    padding: 0.5em;
+    height: auto;
+    overflow: visible;
+
+    #subnav a {
+      font-size: 0.875em;
+      margin-bottom: 0.325em;
+    }
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 975px) {
+  
+  #main-wrapper{
+    #nav-previous, #nav-next {
+      width: 6%;
+
+      span {
+        width: 58px;
+        top: 38%;
+      }
+    }
+  }
+
+  .feature-top {
+    display: none;
+  }
+  .feature-bottom {
+    display: none;
+  }
+  .ad-unit {
+    right: 7%;
+    bottom: 5%;
+    top: auto;
+    left: auto;
+  }
+
+  #slide-zero .hero-module {
+
+    .copy {
+      width: 450px;
+    }
+    .ad-unit {
+      top: 35%;
+    }
+  }
+
+  .hero-text-intro .hero-intro {
+    .big-header .copy {
+      width: 55%;
+      top: 15%;
+      left: 30%;
+      p {
+        font-size: 1.1em;
+      }
+      h1 {
+        font-size: 3em;
+      }
+    }
+  }
+
+}
+
+@media screen and (min-width:481px) and (max-width:760px) {
+  #main-wrapper{
+    #nav-previous, #nav-next {
+      width: 10%;
+
+      span {
+        width: 58px;
+        top: 25%;
+      }
+    }
+  }
+
+  .hero-text-intro .hero-intro {
+    .big-header .copy {
+      top: 10%;
+
+      h1 {
+        font-size: 2.75em;
+      }
+    }
+  }
+
+}
+
+
+@media screen and (max-width:63.9999em) {
+  #r-960 {
+    display: block;
+  }
+  // .hero-wrap .big-header {
+  //   background-size: contain;
+  // }
+
+  .menu-footer {
+    display: none;
+  }
+  div[data-size="2-1"] {
+    width: 100%;
+    &.text-module .copy {
+      width: 95%;
+      padding: 10% 0;
+      //Instead of the line below you could use @includebox-sizing($bs)
+      box-sizing: border-box;
+    }
+  }
+  div[data-size="2-2"] {
+    width: 100%;
+    &.text-module .copy {
+      width: 95%;
+      padding: 10% 0;
+      //Instead of the line below you could use @includebox-sizing($bs)
+      box-sizing: border-box;
+    }
+  }
+  div[data-size="2-3"] {
+    width: 100%;
+    &.text-module .copy {
+      width: 95%;
+      padding: 10% 0;
+      //Instead of the line below you could use @includebox-sizing($bs)
+      box-sizing: border-box;
+    }
+  }
+  div[data-size="3-1"] {
+    width: 100%;
+    &.text-module .copy {
+      width: 95%;
+      padding: 10% 0;
+      //Instead of the line below you could use @includebox-sizing($bs)
+      box-sizing: border-box;
+    }
+  }
+  div[data-size="3-2"] {
+    width: 100%;
+    &.text-module .copy {
+      width: 95%;
+      padding: 10% 0;
+      //Instead of the line below you could use @includebox-sizing($bs)
+      box-sizing: border-box;
+    }
+  }
+  div[data-size="3-3"] {
+    width: 100%;
+    &.text-module .copy {
+      width: 95%;
+      padding: 10% 0;
+      //Instead of the line below you could use @includebox-sizing($bs)
+      box-sizing: border-box;
+    }
+  }
+  div[data-size="4-1"] {
+    width: 100%;
+    &.text-module {
+      height: auto !important;
+      padding: 10% 0;
+      .copy {
+        width: 95%;
+        padding: 10% 0;
+        //Instead of the line below you could use @includebox-sizing($bs)
+        box-sizing: border-box;
+      }
+    }
+  }
+  div[data-size="4-2"] {
+    width: 100%;
+    &.text-module .copy {
+      width: 95%;
+      padding: 10% 0;
+      //Instead of the line below you could use @includebox-sizing($bs)
+      box-sizing: border-box;
+    }
+  }
+  div[data-size="4-3"] {
+    width: 100%;
+    &.text-module .copy {
+      width: 95%;
+      padding: 10% 0;
+      //Instead of the line below you could use @includebox-sizing($bs)
+      box-sizing: border-box;
+    }
+  }
+  div[data-size="1-0"] {
+    width: 100% !important;
+  }
+  div[data-size="2-0"] {
+    width: 100% !important;
+  }
+  div[data-size="3-0"] {
+    width: 100% !important;
+  }
+  div[data-size="4-0"] {
+    width: 100% !important;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+  .slide {
+    .module {
+      .big-text {
+        font-size: 1.8em;
+      }
+      .copy {
+        h3 + p {
+          font-size: 1.1em;
+        }
+
+        p {
+          font-size: 15px;
+          line-height: 21px;
+        }
+      }
+    }
+  }
+  .single-product {
+    .images {
+      width: 100%;
+      float: none;
+    }
+    .product-content {
+      width: 100%;
+      float: none;
+    }
+  }
+  #lobo-reviews {
+    .form {
+      .comment-form-comment {
+        width: 100% !important;
+      }
+      p.comment-form-rating {
+        width: 100% !important;
+      }
+    }
+    .form-submit {
+      left: initial;
+      right: 106px;
+    }
+  }
+  .rating-word {
+    width: 40%;
+  }
+  .logged-in #lobo-reviews .form p.comment-form-rating {
+    width: 100% !important;
+  }
+  
+  .footer {
+    min-height: 100px;
+    .social-area {
+      display: none;
+    }
+    .credits {
+      font-size: 12px;
+      margin-top: 35px;
+    }
+  }
+  .post-wrapper {
+    padding: 75px 0 0;
+  }
+  .single-post {
+    .aside-left {
+      float: none;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 75px;
+    }
+    .hentry {
+      float: none;
+      width: 100%;
+      padding: 0 11%;
+      //Instead of the line below you could use @includebox-sizing($bs)
+      box-sizing: border-box;
+    }
+    blockquote {
+      width: 75%;
+      margin: 45px auto;
+    }
+    .post-excerpt {
+      .left-note {
+        position: relative;
+        width: 50%;
+        margin-top: 45px;
+        display: block;
+        left: 0;
+      }
+      figure {
+        width: 100% !important;
+        margin-left: 0;
+      }
+      iframe {
+        width: 100% !important;
+        margin-left: 0;
+      }
+      img {
+        max-width: 100%;
+        margin-left: 0;
+      }
+      figcaption {
+        margin-left: 0;
+        text-align: center;
+      }
+    }
+    .comments-header {
+      padding: 0 5%;
+      //Instead of the line below you could use @includebox-sizing($bs)
+      box-sizing: border-box;
+    }
+    .comment-inner {
+      width: 100%;
+    }
+    .respond-inner {
+      width: 100%;
+      padding: 5%;
+      //Instead of the line below you could use @includebox-sizing($bs)
+      box-sizing: border-box;
+    }
+    .submit-btn-helper {
+      position: relative;
+      display: block;
+      text-align: center;
+      top: 0;
+      width: 50%;
+      margin: 0 auto;
+      left: 0;
+
+      &:after {
+        display: none;
+      }
+    }
+    .submit-caption {
+      position: relative;
+      display: block;
+      text-align: center;
+      top: 0;
+
+      &.hello {
+        left: 0;
+        top: -50px;
+      }
+    }
+    .respond-form {
+      padding: 25px 0;
+    }
+    .blog-categories {
+      display: none;
+    }
+    .comment-list .children .comment {
+      padding-left: 25%;
+    }
+    .comment-form input#submit {
+      position: relative;
+      display: block;
+      text-align: center;
+      top: 0;
+
+      &.hello {
+        position: absolute;
+        width: 200px;
+        margin: 0 auto;
+        top: 85%;
+        left: 50%;
+        margin-left: -100px;
+      }
+    }
+    .respond-field input {
+      width: 95%;
+      text-align: center;
+    }
+  }
+  .aside-gridder {
+    float: none;
+  }
+  .comment-wrapper {
+    padding: 0 5%;
+    //Instead of the line below you could use @includebox-sizing($bs)
+    box-sizing: border-box;
+  }
+  .blog-actions {
+    width: 50%;
+  }
+  .pagination-inner {
+    width: 80%;
+  }
+  .compact-menu .main-d-nav {
+    .social-area {
+      width: 100%;
+      right: 0;
+      left: 1%;
+      ul {
+        text-align: center;
+        li:last-child a i {
+          margin-right: 0;
+        }
+      }
+    }
+    ul li a {
+      font-size: 23px;
+    }
+  }
+  .actions-bottom .sticky-head-elmnts .hero-sticky-title {
+    display: none;
+  }
+  .no-cmpt.is-active-wc .menu-firer {
+    right: 119px;
+    top: 48px;
+  }
+  div[data-size="1-1"].text-module .copy {
+    width: 95%;
+    padding: 10% 0;
+    //Instead of the line below you could use @includebox-sizing($bs)
+    box-sizing: border-box;
+  }
+  div[data-size="1-2"].text-module .copy {
+    width: 95%;
+    padding: 10% 0;
+    //Instead of the line below you could use @includebox-sizing($bs)
+    box-sizing: border-box;
+  }
+  div[data-size="1-3"].text-module .copy {
+    width: 95%;
+    padding: 10% 0;
+    //Instead of the line below you could use @includebox-sizing($bs)
+    box-sizing: border-box;
+  }
+  div[data-size="1-4"].text-module .copy {
+    width: 95%;
+    padding: 10% 0;
+    //Instead of the line below you could use @includebox-sizing($bs)
+    box-sizing: border-box;
+  }
+  div[data-size="2-4"].text-module .copy {
+    width: 95%;
+    padding: 10% 0;
+    //Instead of the line below you could use @includebox-sizing($bs)
+    box-sizing: border-box;
+  }
+  div[data-size="3-4"].text-module .copy {
+    width: 95%;
+    padding: 10% 0;
+    //Instead of the line below you could use @includebox-sizing($bs)
+    box-sizing: border-box;
+  }
+  div[data-size="4-4"].text-module .copy {
+    width: 95%;
+    padding: 10% 0;
+    //Instead of the line below you could use @includebox-sizing($bs)
+    box-sizing: border-box;
+  }
+  .cats li a {
+    font-size: 25px;
+  }
+}
+@media screen and (min-width:30em) and (max-width:63.9999em) {
+  .full-col {
+    width: 100%;
+  }
+
+  .one-half, .one-third, .two-third, .one-fourth, .three-fourth, .one-fifth, .two-fifth, .three-fifth, .four-fifth, .one-sixth, .five-sixth {
+    position: relative;
+    margin-right: 0;
+    float: none;
+  }
+
+  .one-half {
+    width: 48%;
+  }
+  .one-third {
+    width: 30.66%;
+  }
+  .two-third {
+    width: 65.33%;
+  }
+  .one-fourth {
+    width: 22%;
+  }
+  .three-fourth {
+    width: 74%;
+  }
+  .one-fifth {
+    width: 16.8%;
+  }
+  .two-fifth {
+    width: 37.6%;
+  }
+  .three-fifth {
+    width: 58.4%;
+  }
+  .four-fifth {
+    width: 67.2%;
+  }
+  .one-sixth {
+    width: 13.33%;
+  }
+  .five-sixth {
+    width: 82.67%;
+  }
+  div[data-size="1-1"] {
+    width: 50%;
+  }
+  div[data-size="1-2"] {
+    width: 50%;
+  }
+  div[data-size="1-3"] {
+    width: 50%;
+  }
+  div[data-size="1-4"] {
+    width: 50%;
+  }
+  div[data-size="2-1"] {
+    width: 100%;
+  }
+  div[data-size="2-2"] {
+    width: 100%;
+  }
+  div[data-size="2-3"] {
+    width: 100%;
+  }
+  div[data-size="2-4"] {
+    width: 100%;
+  }
+  div[data-size="3-1"] {
+    width: 100%;
+  }
+  div[data-size="3-2"] {
+    width: 100%;
+  }
+  div[data-size="3-3"] {
+    width: 100%;
+  }
+  div[data-size="3-4"] {
+    width: 100%;
+  }
+  div[data-size="4-1"] {
+    width: 100%;
+  }
+  div[data-size="4-2"] {
+    width: 100%;
+  }
+  div[data-size="4-3"] {
+    width: 100%;
+  }
+  div[data-size="4-4"] {
+    width: 100%;
+  }
+  body {
+    [data-cols="cols-3"] .prtfl-item {
+      width: 50% !important;
+    }
+    [data-cols="cols-4"] .prtfl-item {
+      width: 50% !important;
+    }
+  }
+  .group-module {
+    position: relative;
+    width: 100%;
+  }
+  .prjct-description {
+    display: none;
+  }
+  .posts-stream[data-cols="3"] .post-item {
+    width: 50%;
+    height: 480px;
+  }
+  .posts-stream[data-cols="4"] .post-item {
+    width: 50%;
+    height: 480px;
+  }
+  .posts-stream[data-cols="5"] .post-item {
+    width: 50%;
+    height: 480px;
+  }
+  .resize-heros #hero-wrapper {
+    .hero-image, .hero-slider {
+      img {
+        width: 200% !important;
+        max-width: 200% !important;
+        height: auto !important;
+        margin-left: -50% !important;
+      }
+    }
+    .hero-intro .text-module {
+      min-height: 480px;
+    }
+  }
+  #header .main-c-nav {
+    a {
+      font-size: 45px;
+    }
+    .c-nav-social a {
+      font-size: 20px;
+    }
+  }
+  .post-body .single-post {
+    h2 {
+      width: 65%;
+    }
+    h3 {
+      width: 65%;
+    }
+  }
+  .hero-sticky-title.hello {
+    width: 40%;
+  }
+  .boxed-layout .hero-sticky-title.hello {
+    width: 100%;
+  }
+  .error404 .post-body {
+    padding: 15px 0 15px 50px;
+    margin: 35px 0 100px;
+    h2 {
+      font-size: 30px;
+    }
+    .post-excerpt {
+      margin-left: 0;
+    }
+  }
+  a.view-item-btn {
+    height: 95px;
+    line-height: 90px;
+  }
+}
+@media screen and(min-width:800px) and(max-width:1024px) {
+  body [data-cols="cols-3"] .prtfl-item {
+    width: 33.32% !important;
+  }
+}
+
+@media screen and(min-width:60em) and(max-width:89.9999em) {
+  h2 {
+    font-size: 1.5em;
+  }
+  .module {
+    .btn {
+      line-height: 30px;
+      padding: 3px 13px;
+    }
+    .team-wdgt .img-asset {
+      display: block;
+      max-width: 375px;
+      margin: 0 auto;
+      left: 1%;
+      right: 1%;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+  .submit-btn-helper {
+    left: -35%;
+  }
+  .compact-menu .main-d-nav {
+    ul li a {
+      font-size: 25px;
+    }
+    .menu-footer p {
+      width: 44%;
+    }
+  }
+  body .module {
+    .big-text {
+      font-size: 1.75em;
+    }
+    div.copy p {
+      font-size: 15px;
+      line-height: 20px;
+    }
+  }
+  div[data-size="2-1"].text-module .copy {
+    width: 85%;
+  }
+  div[data-size="4-1"].text-module .copy {
+    width: 70%;
+  }
+  .posts-stream[data-cols="5"] .post-item {
+    width: 25%;
+    height: 480px;
+  }
+  .team-wdgt.info-bottom .rsBullets {
+    bottom: 3%;
+    width: 98%;
+  }
+  .error404 .post-body {
+    padding: 15px 0 15px 50px;
+    margin: 35px 0 100px;
+    h2 {
+      font-size: 30px;
+    }
+    .post-excerpt {
+      margin-left: 0;
+    }
+  }
+}
+
+@media only screen and(max-width: 760px),(min-device-width: 768px) and(max-device-width: 1024px) {
+  .woocommerce-page {
+    td {
+      border: none;
+      border-bottom: 1px solid $color_gallery_approx;
+      position: relative;
+      padding-left: 50%;
+    }
+    &:not(.single-product) {
+      table {
+        display: block;
+      }
+      thead {
+        display: block;
+      }
+      tbody {
+        display: block;
+      }
+      th {
+        display: block;
+      }
+      td {
+        display: block;
+      }
+      tr {
+        display: block;
+      }
+    }
+    .the-post h2 {
+      font-size: 27px;
+      line-height: 35px;
+    }
+    .post-excerpt p {
+      font-size: 14px !important;
+      line-height: 23px !important;
+      font-weight: 100;
+    }
+  }
+  .woocommerce {
+    tr {
+      border: 1px solid $color_celeste_approx;
+      &.cart_item {
+        margin-left: 10%;
+      }
+    }
+    td {
+      &:before {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-size: 11px;
+        line-height: 17px;
+        font-weight: 800;
+        color: $color_pink_swan_approx;
+        text-transform: uppercase;
+      }
+      &.product-price {
+        margin-top: -47px;
+        &:before {
+          top: -18px;
+          left: 120px;
+        }
+      }
+      &.product-quantity {
+        margin: -45px 0 0;
+        padding: 0 0 20px 15px;
+      }
+      &.product-remove {
+        position: absolute;
+        margin-top: -285px;
+        left: 80%;
+      }
+      &.product-subtotal:before {
+        top: -18px;
+        left: 15px;
+      }
+    }
+    #order_review {
+      th {
+        width: 100%;
+        text-align: center;
+        //Instead of the line below you could use @includebox-sizing($bs)
+        box-sizing: border-box;
+      }
+      td {
+        width: 100%;
+        text-align: center;
+        //Instead of the line below you could use @includebox-sizing($bs)
+        box-sizing: border-box;
+        padding: 0;
+
+        &:before {
+          top: 3px;
+        }
+      }
+      .shop_table {
+        tfoot {
+          display: block;
+        }
+        tbody {
+          margin-top: 50px;
+        }
+      }
+      table {
+        margin-left: 50px auto;
+      }
+      tr.cart_item {
+        margin-left: 0;
+      }
+    }
+    .cart_totals {
+      td {
+        width: 100%;
+        text-align: center;
+        //Instead of the line below you could use @includebox-sizing($bs)
+        box-sizing: border-box;
+        padding: 0;
+
+        span {
+          display: block;
+          text-align: center;
+          width: 100%;
+        }
+      }
+      table {
+        margin: 45px auto 15px auto;
+      }
+    }
+    .lobo-tabs {
+      .contents {
+        padding: 50px;
+      }
+      input[name="update_cart"], input.checkout-button {
+        width: 265px;
+        line-height: 55px;
+        height: 55px;
+        padding: 0 40px;
+      }
+    }
+    .wcp-title {
+      font-size: 27px;
+      line-height: 35px;
+    }
+    thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+    &:not(.single-product) td {
+      &:nth-of-type(2):before {
+        content: "Price";
+      }
+      &:nth-of-type(4):before {
+        content: "Total";
+      }
+    }
+    .cart-subtotal th, .shipping th, .order-total th {
+      width: 100%;
+      text-align: center;
+      //Instead of the line below you could use @includebox-sizing($bs)
+      box-sizing: border-box;
+    }
+  }
+  .woo-cheader .woocommerce-breadcrumb {
+    display: none;
+  }
+  .single-product td {
+    padding-left: 5%;
+  }
+}
+
+//
+@media screen and(min-width: 0px) and(max-width: 800px) {
+  .rsDefault {
+    .rsThumb {
+      width: 59px;
+      height: 44px;
+    }
+    .rsThumbsHor {
+      height: 44px;
+    }
+    .rsThumbsVer {
+      width: 59px;
+    }
+  }
+}

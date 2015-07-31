@@ -1,0 +1,264 @@
+/* > 1.3 Footer
+----------------------------------------------------------------------------- */
+.footer {
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+    background: $white;
+    padding: 15px 0;
+    z-index: 1;
+  
+  .social-area { 
+    margin-top: 25px;
+    
+    ul{
+      display: block;
+      width: 100%;
+      padding: 0 25%;
+      text-align: center;
+      -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+          -ms-box-sizing: border-box;
+           -o-box-sizing: border-box;
+              box-sizing: border-box;
+
+      li {
+        display: inline-block;
+        text-align: center;
+        margin-right: 30px;
+        line-height: 150px;
+
+        &:last-child { margin: 0; }
+
+        a {
+          font-family: 'Lato', 'HelveticaNeue', helvetica, arial, sans-serif;
+          font-size: 11px;
+          font-weight: 600;
+          text-transform: uppercase;
+
+          i {
+            position: absolute;
+            left: -9999px;
+          }
+        }
+      }
+    }
+  }
+
+  .credits {
+    font-family: 'Lekton', 'Lato', sans-serif;
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    margin: 0;
+  }
+}
+
+div.btn-link {
+  display: inline;
+}
+
+.footer a,
+.btn-link,
+.btn-link a,
+.cats a,
+.call-to-action-module h2,
+.call-to-action-module h3,
+.call-to-action-module h4  { position: relative; }
+
+.footer a:after,
+.btn-link:after,
+.btn-link a:after,
+.cats a:after,
+.cats-blog a:after,
+.action a:after,
+.call-to-action-module h2:after,
+.call-to-action-module h3:after,
+.call-to-action-module h4:after,
+.hero-info a:after,
+.royalSlider.tabs .rsTab:after,
+.woo-cheader a:after,
+.shop_table .product-name a:after,
+#shop-search a:after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #000;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transform: translateY(7px);
+  transform: translateY(7px);
+  transition: -webkit-transform .1s cubic-bezier(0.55,.085,.68,.53),opacity .1s cubic-bezier(0.55,.085,.68,.53);
+  transition: transform .1s cubic-bezier(0.55,.085,.68,.53),opacity .1s cubic-bezier(0.55,.085,.68,.53);
+}
+
+#shop-search a.ui-slider-handle:after { height: 0; }
+
+.hero-info a:after { bottom: 3px; }
+
+.pagination-module .btn-link:after { bottom: 50%; }
+
+.footer a:hover:after,
+.btn-link:hover:after,
+.btn-link a:hover:after,
+.cats a:hover:after,
+.cats-blog a:hover:after,
+.action a:hover:after,
+.call-to-action-module:hover h2:after,
+.call-to-action-module:hover h3:after,
+.call-to-action-module:hover h4:after,
+.hero-info a:hover:after,
+.royalSlider.tabs .rsTab:hover:after,
+.royalSlider.tabs .rsTab.rsNavSelected:after,
+.woo-cheader a:hover:after,
+.shop_table .product-name a:hover:after,
+#shop-search a:hover:after {
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;
+  transition: -webkit-transform .2s cubic-bezier(0.25,.46,.45,.94),opacity 0s linear;
+  transition: transform .2s cubic-bezier(0.25,.46,.45,.94),opacity 0s linear;
+  transition-delay: 0s;
+}
+.cats a:after,
+.cats-blog a:after {
+  background: #fff85f; 
+  height: 1px;
+}
+.action a:after { background: #fff85f; }
+.call-to-action-module {
+  h2:after, h3:after, h4:after { 
+    background: #fff85f;
+  }
+}
+
+.footer {
+  .shr-btn-twitter:after { background: #00aced; }
+  .shr-btn-facebook:after { background: #3b5998; }
+  .shr-btn-behance:after { background: #1769FF; }
+  .shr-btn-pinterest:after { background: #cb2027; }
+  .shr-btn-instagram:after { background: #3F729B; }
+  .shr-btn-soundcloud:after { background: #F76700; }
+  .shr-btn-linkedin:after { background: #3399CC; }
+  .shr-btn-dribbble:after { background: #EA4C89; }
+  .shr-btn-flickr:after { background: #FF0084; }
+  .shr-btn-gplus:after { background: #DD4B39; }
+}
+
+/* Helper classes
+   -------------------------------------------- */
+.face-control {
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Elastic columns */
+.full-col { width:100%; }
+.one-half { width:48%; }
+.one-third { width:30.66%; }
+.two-third { width:65.33%; }
+.one-fourth { width:22%; }
+.three-fourth { width:74%; }
+.one-fifth { width:16.8%; }
+.two-fifth { width:37.6%; }
+.three-fifth { width:58.4%; }
+.four-fifth { width:67.2%; }
+.one-sixth { width:13.33%; }
+.five-sixth { width:82.67%; }
+
+.one-half,
+.one-third,
+.two-third,
+.three-fourth,
+.one-fourth,
+.one-fifth,
+.two-fifth,
+.three-fifth,
+.four-fifth,
+.one-sixth,
+.five-sixth {
+  position: relative;
+  margin-right: 4%;
+  float: left;
+}
+
+.last {
+  margin-right: 0 !important;
+  clear:right;
+}
+
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px;
+  
+  &:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+  }
+}
+
+/* Hide from both screenreaders and browsers */
+.hidden { display: none !important; visibility: hidden; }
+
+
+.visuallyhidden {
+  /*Hide only visually, but have it available for screenreaders*/
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+
+  /* Extends the .visuallyhidden class to allow the element
+  to be focusable when navigated to via the keyboard*/
+  &.focusable {
+    &:active, &:focus {
+      clip: auto;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      position: static;
+      width: auto;
+    }
+  }
+}
+
+/*Hide visually and from screenreaders, but maintain layout*/
+.invisible { visibility: hidden; }
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix {
+  &:before, &:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+/* For IE 6/7 only
+   Include this rule to trigger hasLayout and contain floats */
+
+.clearfix { *zoom: 1; }

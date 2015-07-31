@@ -1,0 +1,4986 @@
+/* THIRD PARTY
+   ========================================================================== */
+
+/* Tabs */
+
+
+/* Latest */
+.latest-module {
+  .prtfl-item {
+    @extend %extend_43;
+  }
+  .post-item {
+    @extend %extend_43;
+  }
+}
+
+
+/* Separator */
+.separator {
+  width: 100%;
+  height: 100px;
+  h3 {
+    font-weight: 700;
+    padding: 30px 20px 0;
+    text-transform: uppercase;
+    vertical-align: middle;
+    display: inline-block;
+    &:after {
+      content: "";
+      position: relative;
+      margin-top: -5px;
+      height: 2px;
+      pointer-events: none;
+      opacity: 1;
+      width: auto;
+      display: block;
+      //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+      transform: translateY(7px);
+      //Instead of the line below you could use @includetransition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: transform .1s cubic-bezier(0.55,.085,.68,.53),opacity .1s cubic-bezier(0.55,.085,.68,.53);
+    }
+  }
+}
+
+/* Galleria */
+#galleria {
+  height: 100%;
+  left: 0;
+  position: fixed !important;
+  top: 0;
+  width: 100%;
+  z-index: 99998;
+  display: none;
+}
+.galleria {
+  display: none;
+}
+.galleria-run {
+  //Instead of the line below you could use @includetransition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: all 250ms linear;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $black_50;
+  span {
+    //Instead of the line below you could use @includetransition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: all 250ms linear;
+    &:after {
+      //Instead of the line below you could use @includetransition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: all 250ms linear;
+    }
+    &:before {
+      //Instead of the line below you could use @includetransition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: all 250ms linear;
+    }
+  }
+  div {
+    display: table;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    * {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+  .text {
+    color: $white;
+    font-size: 13px;
+    line-height: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .icon {
+    width: 100%;
+    height: 43px;
+    position: relative;
+    display: inline-block;
+    &:before {
+      @extend %extend_44;
+    }
+    &:after {
+      @extend %extend_44;
+      background-position: 0 0;
+      opacity: 0;
+    }
+  }
+  &:hover {
+    background: $white_80;
+    .text {
+      color: $black;
+    }
+    .icon {
+      &:before {
+        opacity: 0;
+      }
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+/* Royal Slider */
+.royalSlider {
+  width: 100%;
+  height: auto;
+  position: relative;
+  direction: ltr;
+  &.tabs {
+    .rsTab {
+      padding: 0;
+      cursor: pointer;
+      font-size: 17px;
+      line-height: 17px;
+      position: relative;
+      background: transparent !important;
+      border: none !important;
+      list-style: none !important;
+      margin: 0 15px !important;
+      //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      box-shadow: none !important;
+      //Instead of the line below you could use @includetext-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      text-shadow: none !important;
+      &:after {
+        @extend %extend_30;
+      }
+      &.rsNavSelected {
+        font-weight: 700;
+        color: $black;
+        &:after {
+          @extend %extend_31;
+        }
+      }
+      &:hover:after {
+        @extend %extend_31;
+      }
+    }
+    .rsTabs {
+      background: $white !important;
+      bottom: 0;
+      color: $black;
+      list-style: none outside none;
+      position: absolute;
+      width: 100%;
+      height: 45px;
+      padding-top: 15px;
+    }
+  }
+  &.rsFullscreen {
+    position: fixed !important;
+    height: auto !important;
+    width: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    z-index: 2147483647 !important;
+    top: 0 !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    right: 0 !important;
+  }
+  &.rsAutoHeight {
+    height: auto;
+  }
+  > * {
+    float: left;
+  }
+  .rsSlide.rsFakePreloader {
+    opacity: 1 !important;
+    //Instead of the line below you could use @includetransition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: 0s;
+    display: none;
+  }
+}
+
+.rsWebkit3d {
+  .rsSlide {
+  }
+  .rsContainer {
+  }
+  .rsThumbs {
+  }
+  .rsPreloader {
+  }
+  img {
+  }
+  .rsOverflow {
+  }
+  .rsBtnCenterer {
+  }
+  .rsAbsoluteEl {
+  }
+  .rsABlock {
+  }
+  .rsLink {
+  }
+}
+.rsOverflow {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  float: left;
+  cursor: move;
+}
+.rsVisibleNearbyWrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  .rsOverflow {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+.rsAutoHeight .rsSlide {
+  height: auto;
+}
+
+.rsContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.rsArrow {
+  cursor: pointer;
+  opacity: 1;
+  //Instead of the line below you could use @includetransition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: opacity 0.3s linear;
+}
+.rsThumbsArrow {
+  cursor: pointer;
+  opacity: 1;
+  //Instead of the line below you could use @includetransition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: opacity 0.3s linear;
+}
+.rsThumb {
+  float: left;
+  position: relative;
+}
+.rsNav {
+  opacity: 1;
+  //Instead of the line below you could use @includetransition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: opacity 0.3s linear;
+  //Instead of the line below you could use @includeuser-select($select)
+  user-select: none;
+}
+.rsHidden {
+  opacity: 0;
+  visibility: hidden;
+  //Instead of the line below you could use @includetransition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: visibility 0s linear 0.3s,opacity 0.3s linear;
+}
+.rsGCaption {
+  width: 100%;
+  float: left;
+  text-align: center;
+}
+.rsSlide {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+.rsContent {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.rsPreloader {
+  position: absolute;
+  z-index: 0;
+}
+.rsNavItem {
+}
+.rsThumbs {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  float: left;
+  z-index: 22;
+}
+.rsTabs {
+  float: left;
+  background: none !important;
+}
+.rsVideoContainer {
+  width: auto;
+  height: auto;
+  line-height: 0;
+  position: relative;
+  iframe {
+    @extend %extend_45;
+  }
+  video {
+    @extend %extend_45;
+  }
+  embed {
+    @extend %extend_45;
+  }
+  .rsVideoObj {
+    @extend %extend_45;
+  }
+  &.rsIOSVideo {
+    iframe {
+      //Instead of the line below you could use @includebox-sizing($bs)
+      box-sizing: border-box;
+      padding-right: 44px;
+    }
+    video {
+      //Instead of the line below you could use @includebox-sizing($bs)
+      box-sizing: border-box;
+      padding-right: 44px;
+    }
+    embed {
+      //Instead of the line below you could use @includebox-sizing($bs)
+      box-sizing: border-box;
+      padding-right: 44px;
+    }
+  }
+}
+.rsVideoFrameHolder {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: $color_bunker_approx;
+  opacity: 0;
+  &.rsVideoActive {
+    opacity: 1;
+  }
+}
+.rsABlock {
+  left: 0;
+  top: 0;
+  position: absolute;
+  z-index: 15;
+}
+.sldr-nofade {
+  .bottom-dark .hero-item .rsOverflow {
+    cursor: move !important;
+    cursor: $url_30 8 8, move !important;
+  }
+  .top-dark .hero-item .rsOverflow {
+    cursor: move !important;
+    cursor: $url_30 8 8, move !important;
+  }
+  .bottom-light .hero-item .rsOverflow {
+    cursor: move !important;
+    cursor: $url_31 8 8, move !important;
+  }
+  .top-light .hero-item .rsOverflow {
+    cursor: move !important;
+    cursor: $url_31 8 8, move !important;
+  }
+  .rsDefault .rsArrow {
+    width: 15%;
+  }
+}
+.bottom-dark {
+  .hero-item .rsOverflow {
+    .rsArrowLeft {
+      cursor: $url_32 8 8, move !important;
+    }
+    .rsArrowRight {
+      cursor: $url_34 8 8, move !important;
+    }
+  }
+  .rsArrowLeft .grab-cursor {
+    cursor: $url_32 8 8, move !important;
+  }
+  .rsArrowRight .grab-cursor {
+    cursor: $url_34 8 8, move !important;
+  }
+}
+.rsNoDrag {
+  cursor: auto;
+}
+.rsLink {
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 20;
+  background: $url_38;
+}
+.rsDefault {
+  .rsOverflow {
+  }
+  .rsSlide {
+  }
+  .rsVideoFrameHolder {
+  }
+  .rsThumbs {
+  }
+  .rsArrow {
+  }
+  &.rsVer {
+    .rsArrow {
+      width: 100%;
+      height: 44px;
+    }
+    .rsArrowLeft {
+      top: 0;
+      left: 0;
+      .rsArrowIcn {
+        background-position: -96px -32px;
+      }
+    }
+    .rsArrowRight {
+      bottom: 0;
+      left: 0;
+      .rsArrowIcn {
+        background-position: -96px -64px;
+      }
+    }
+  }
+  .rsArrowLeft {
+    height: 85%;
+  }
+  &.rsHor {
+    .rsArrowLeft {
+      left: 0;
+      top: 0;
+      .rsArrowIcn {
+        background-position: -64px -32px;
+      }
+    }
+    .rsArrowRight {
+      right: 0;
+      top: 0;
+      .rsArrowIcn {
+        background-position: -64px -64px;
+      }
+    }
+  }
+  .rsArrowIcn {
+    display: none;
+    width: 32px;
+    height: 32px;
+    top: 50%;
+    left: 50%;
+    margin-top: -16px;
+    margin-left: -16px;
+    position: absolute;
+    cursor: pointer;
+    background-color: $black;
+    background-color: $black_75;
+    *background-color: $black;
+    //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+    border-radius: 2px;
+    &:hover {
+      background-color: $black_90;
+    }
+  }
+  .rsBullets {
+    position: absolute;
+    z-index: 35;
+    left: 0;
+    bottom: 9%;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 8px;
+    overflow: hidden;
+  }
+  .rsBullet {
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    cursor: pointer;
+    padding: 6px 5px;
+    span {
+      display: block;
+      width: 8px;
+      height: 8px;
+      //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+      border-radius: 50%;
+      background: $color_tapa_approx;
+      background: rgba(255, 255, 255, 0);
+      border: 1px solid $black;
+      opacity: 0.5;
+    }
+    &.rsNavSelected span {
+      background-color: $black;
+      opacity: 0.7;
+      border: 1px solid $black;
+    }
+  }
+  .rsThumbsHor {
+    width: 100%;
+    height: 72px;
+  }
+  .rsThumbsVer {
+    width: 96px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  &.rsWithThumbsHor {
+    .rsThumbsContainer {
+      position: relative;
+      height: 100%;
+    }
+    .rsThumbsArrowLeft {
+      left: 0;
+      top: 0;
+      .rsThumbsArrowIcn {
+        background-position: -128px -32px;
+      }
+    }
+    .rsThumbsArrowRight {
+      right: 0;
+      top: 0;
+      .rsThumbsArrowIcn {
+        background-position: -128px -48px;
+      }
+    }
+  }
+  &.rsWithThumbsVer {
+    .rsThumbsContainer {
+      position: relative;
+      width: 100%;
+    }
+    .rsThumbsArrow {
+      width: 100%;
+      height: 20px;
+    }
+    .rsThumbsArrowLeft {
+      top: 0;
+      left: 0;
+      .rsThumbsArrowIcn {
+        background-position: -144px -32px;
+      }
+    }
+    .rsThumbsArrowRight {
+      bottom: 0;
+      left: 0;
+      .rsThumbsArrowIcn {
+        background-position: -144px -48px;
+      }
+    }
+  }
+  .rsThumb {
+    float: left;
+    overflow: hidden;
+    width: 96px;
+    height: 72px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    &.rsNavSelected {
+      background: $color_salem_approx;
+      img {
+        opacity: 0.3;
+        filter: alpha(opacity=30);
+      }
+    }
+  }
+  .rsTmb {
+    display: block;
+    h5 {
+      font-size: 16px;
+      margin: 0;
+      padding: 0;
+      line-height: 20px;
+      color: $white;
+    }
+    span {
+      color: $color_alto_approx;
+      margin: 0;
+      padding: 0;
+      font-size: 13px;
+      line-height: 18px;
+    }
+  }
+  .rsThumbsArrow {
+    height: 100%;
+    width: 20px;
+    position: absolute;
+    display: block;
+    cursor: pointer;
+    z-index: 21;
+    background: $black;
+    background: $black_75;
+    &:hover {
+      background: $black_90;
+    }
+  }
+  .rsThumbsArrowIcn {
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    margin-top: -8px;
+    margin-left: -8px;
+    position: absolute;
+    cursor: pointer;
+    background: $url_40;
+  }
+  .rsThumbsArrowDisabled {
+    display: none !important;
+  }
+  .rsTabs {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+    padding-top: 12px;
+    position: relative;
+  }
+  .rsTab {
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    height: auto;
+    width: auto;
+    color: $color_mine_shaft_approx;
+    padding: 5px 13px 6px;
+    min-width: 72px;
+    border: 1px solid $color_alto_approx;
+    border-right: 1px solid $color_wild_sand_approx;
+    text-decoration: none;
+    background-color: $white;
+    background-image: linear-gradient(to bottom, $color_romance_approx, $wild_sand);
+    //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: inset 1px 0 0 $white;
+    *display: inline;
+    *zoom: 1;
+    &:first-child {
+      //Instead of the line below you could use @includeborder-top-left-radius($radius)
+      border-top-left-radius: 4px;
+      //Instead of the line below you could use @includeborder-bottom-left-radius($radius)
+      border-bottom-left-radius: 4px;
+    }
+    &:last-child {
+      //Instead of the line below you could use @includeborder-top-right-radius($radius)
+      border-top-right-radius: 4px;
+      //Instead of the line below you could use @includeborder-bottom-right-radius($radius)
+      border-bottom-right-radius: 4px;
+      border-right: 1px solid $color_celeste_approx;
+    }
+    &:active {
+      border: 1px solid $color_alto_approx;
+      background-color: $wild_sand;
+      //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      box-shadow: 0 1px 4px $black_20 inset;
+    }
+    &.rsNavSelected {
+      color: $white;
+      border: 1px solid $color_mountain_mist_approx;
+      //Instead of the line below you could use @includetext-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      text-shadow: 1px 1px $color_gunsmoke_approx;
+      //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      box-shadow: 0 1px 9px $color_storm_dust_65_approx inset;
+      background: $silver_chalice;
+      background-image: linear-gradient(to bottom, $silver_chalice, $color_pink_swan_approx);
+    }
+  }
+  .rsFullscreenBtn {
+    right: 0;
+    top: 0;
+    width: 44px;
+    height: 44px;
+    z-index: 22;
+    display: block;
+    position: absolute;
+    cursor: pointer;
+  }
+
+  /* Fullscreen options, very important ^^ */
+  .rsFullscreenIcn {
+    display: block;
+    margin: 6px;
+    width: 32px;
+    height: 32px;
+    background: $url_40 0 0;
+    background-color: $black;
+    background-color: $black_75;
+    *background-color: $black;
+    //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+    border-radius: 2px;
+    &:hover {
+      background-color: $black_90;
+    }
+  }
+  .rsPlayBtn {
+    width: 64px;
+    height: 64px;
+    margin-left: -32px;
+    margin-top: -32px;
+    cursor: pointer;
+    &:hover .rsPlayBtnIcon {
+      background-color: $black_90;
+    }
+  }
+  .rsPlayBtnIcon {
+    width: 64px;
+    display: block;
+    height: 64px;
+    //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+    border-radius: 4px;
+    //Instead of the line below you could use @includetransition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: .3s;
+    background: $url_40 no-repeat 0 -32px;
+    background-color: $black;
+    background-color: $black_75;
+    *background-color: $black;
+  }
+  .rsBtnCenterer {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+  }
+  .rsCloseVideoBtn {
+    right: 0;
+    top: 0;
+    width: 44px;
+    height: 44px;
+    z-index: 500;
+    position: absolute;
+    cursor: pointer;
+    &.rsiOSBtn {
+      top: -38px;
+      right: -6px;
+    }
+  }
+  .rsCloseVideoIcn {
+    margin: 6px;
+    width: 32px;
+    height: 32px;
+    background: $url_40 -64px 0;
+    background-color: $black;
+    background-color: $black_75;
+    *background-color: $black;
+    &:hover {
+      background-color: $black_90;
+    }
+  }
+  .rsPreloader {
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    top: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+  }
+  .rsGCaption {
+    position: absolute;
+    float: none;
+    bottom: 6px;
+    left: 6px;
+    text-align: left;
+    background: $black;
+    background: $black_75;
+    color: $white;
+    padding: 2px 8px;
+    width: auto;
+    font-size: 12px;
+    //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+    border-radius: 2px;
+  }
+  .rsArrowDisabled .rsArrowIcn {
+    opacity: .2;
+    filter: alpha(opacity=20);
+    *display: none;
+  }
+  &.rsFullscreen .rsFullscreenIcn {
+    background-position: -32px 0;
+  }
+}
+
+
+
+
+
+.module .rsMainSlideImage { position: absolute; }
+.rsVideoContainer {
+  /*left: 0;
+  top: 0;
+  position: absolute;*/
+  /*width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  float: left;*/
+  width: auto;
+  height: auto;
+  line-height: 0;
+  position: relative;
+}
+.rsVideoFrameHolder {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #141414;
+  opacity: 0;
+  -webkit-transition: .3s;
+}
+.rsVideoFrameHolder.rsVideoActive { opacity: 1; }
+.rsVideoContainer iframe,
+.rsVideoContainer video,
+.rsVideoContainer embed,
+.rsVideoContainer .rsVideoObj {
+  position: absolute;
+  z-index: 50;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+/* ios controls over video bug, shifting video */
+.rsVideoContainer.rsIOSVideo iframe,
+.rsVideoContainer.rsIOSVideo video,
+.rsVideoContainer.rsIOSVideo embed {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-right: 44px;
+}
+
+.rsABlock {
+  left: 0;
+  top: 0;
+  position: absolute;
+  z-index: 15;
+  
+}
+.team-wdgt .rsABlock { top: 40%; }
+
+img.rsImg { max-width: none; }
+
+.sldr-nofade .bottom-dark .hero-item .rsOverflow,
+.sldr-nofade .top-dark .hero-item .rsOverflow,
+.sldr-nofade .bottom-light .hero-item .rsOverflow,
+.sldr-nofade .top-light .hero-item .rsOverflow {
+  cursor: move !important;
+}
+.sldr-nofade .bottom-dark .hero-item .rsOverflow,
+.sldr-nofade .top-dark .hero-item .rsOverflow {  
+  cursor: url(../index_files/img/grab-sldr-light.png) 8 8, move  !important;
+}
+.sldr-nofade .bottom-light .hero-item .rsOverflow,
+.sldr-nofade .top-light .hero-item .rsOverflow {
+  cursor: url(../index_files/img/grab-sldr-dark.png) 8 8, move  !important;
+}
+.bottom-dark .hero-item .rsOverflow .rsArrowLeft,
+.top-dark .hero-item .rsOverflow .rsArrowLeft,
+.bottom-dark .rsArrowLeft .grab-cursor,
+.top-dark .rsArrowLeft .grab-cursor {  
+  cursor: url(../index_files/img/grab-gallery-left-light.png) 8 8, move  !important;
+}
+.bottom-light .hero-item .rsOverflow .rsArrowLeft,
+.top-light .hero-item .rsOverflow .rsArrowLeft,
+.bottom-light .rsArrowLeft .grab-cursor,
+.top-light .rsArrowLeft .grab-cursor {  
+  cursor: url(../index_files/img/grab-gallery-left-dark.png) 8 8, move  !important;
+}
+
+.bottom-dark .hero-item .rsOverflow .rsArrowRight,
+.top-dark .hero-item .rsOverflow .rsArrowRight,
+.bottom-dark .rsArrowRight .grab-cursor,
+.top-dark .rsArrowRight .grab-cursor {  
+  cursor: url(../index_files/img/grab-gallery-right-light.png) 8 8, move  !important;
+}
+.bottom-light .hero-item .rsOverflow .rsArrowRight,
+.top-light .hero-item .rsOverflow .rsArrowRight,
+.bottom-light .rsArrowRight .grab-cursor,
+.top-light .rsArrowRight .grab-cursor {  
+  cursor: url(../index_files/img/grab-gallery-right-dark.png) 8 8, move  !important;
+}
+.module .grab-cursor {
+	cursor: url(../index_files/img/grab.png) , move  !important;
+}
+.module .grabbing-cursor {
+	cursor: url(../index_files/img/grabbing.png) , move  !important;
+}
+
+.sldr-fade .hero-slider .rsOverflow { cursor: default; }
+
+.rsNoDrag {
+  cursor: auto;
+}
+.rsLink {
+  left:0;
+  top:0;
+  position:absolute;
+  width:100%;
+  height:100%;
+  display:block;  
+  z-index: 20;
+  background: url(../index_files/img/blank.gif);
+}
+
+/******************************
+*
+*  RoyalSlider Default Skin 
+*
+*    1. Arrows 
+*    2. Bullets
+*    3. Thumbnails
+*    4. Tabs
+*    5. Fullscreen button
+*    6. Play/close video button
+*    7. Preloader
+*    8. Caption
+*    
+*  Sprite: 'rs-default.png'
+*  Feel free to edit anything
+*  If you don't some part - just delete it
+* 
+******************************/
+
+/* Background */
+.rsDefault,
+.rsDefault .rsOverflow,
+.rsDefault .rsSlide,
+.rsDefault .rsVideoFrameHolder,
+.rsDefault .rsThumbs {
+  /*background: #151515;
+  color: #FFF;*/
+}
+
+/***************
+*
+*  1. Arrows
+*
+****************/
+
+.rsDefault .rsArrow {
+  height: 100%;
+  width: 25%;
+  position: absolute;
+  display: block;
+  cursor: pointer;
+  z-index: 21;
+}
+.sldr-nofade .rsDefault .rsArrow { width: 15%; }
+.rsDefault .rsArrow {}
+.rsDefault.rsVer .rsArrow {
+  width: 100%;
+  height: 44px;
+  
+}
+.rsDefault .rsArrowLeft { height: 85%; }
+.rsDefault.rsVer .rsArrowLeft { top: 0; left: 0; }
+.rsDefault.rsVer .rsArrowRight { bottom: 0;  left: 0; }
+
+.rsDefault.rsHor .rsArrowLeft { left: 0; top: 0; }
+.rsDefault.rsHor .rsArrowRight { right: 0; top:0; }
+
+.rsDefault .rsArrowIcn {
+  display: none;   
+  width: 32px;
+  height: 32px;
+  top: 50%;
+  left: 50%;
+  margin-top:-16px; 
+  margin-left: -16px;
+  position: absolute; 
+  cursor: pointer;  
+  /*background: url('rs-default.png');*/
+  background-color: #000;
+  background-color: rgba(0,0,0,0.75);
+  *background-color: #000;
+  border-radius: 2px;
+}
+.rsDefault .rsArrowIcn:hover { background-color: rgba(0,0,0,0.9); }
+.rsDefault.rsHor .rsArrowLeft .rsArrowIcn { background-position: -64px -32px; }
+.rsDefault.rsHor .rsArrowRight .rsArrowIcn { background-position: -64px -64px; }
+.rsDefault.rsVer .rsArrowLeft .rsArrowIcn { background-position: -96px -32px; }
+.rsDefault.rsVer .rsArrowRight .rsArrowIcn { background-position: -96px -64px; }
+.rsDefault .rsArrowDisabled .rsArrowIcn { opacity: .2; filter: alpha(opacity=20);  *display: none; }
+
+/***************
+*
+*  2. Bullets
+*
+****************/
+
+.rsDefault .rsBullets {
+  position: absolute;
+  z-index: 35;
+  left: 0;
+  bottom: 9%;
+  width: 100%;
+  height: auto;
+  margin: 0 auto; 
+  text-align: center;
+  line-height: 8px;
+  overflow: hidden;
+}
+.rsDefault .rsBullet {
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  *display:inline; 
+  *zoom:1;
+  cursor: pointer;
+  padding: 6px 5px 6px;
+}
+.rsDefault .rsBullet span {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #777;
+  background: rgba(255, 255, 255, 0);
+  border: 1px solid #000;
+  opacity: 0.5;
+}
+.rsDefault .rsBullet.rsNavSelected span {
+  background-color: #000;
+  opacity: 0.7;
+  border: 1px solid #000;
+}
+
+/***************
+*
+*  3. Thumbnails
+*
+****************/
+
+.rsDefault .rsThumbsHor {
+  width: 100%;
+  height: 72px;
+}
+.rsDefault .rsThumbsVer {
+  width: 96px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.rsDefault.rsWithThumbsHor .rsThumbsContainer {
+  position: relative;
+  height: 100%;
+}
+.rsDefault.rsWithThumbsVer .rsThumbsContainer {
+  position: relative;
+  width: 100%;
+}
+.rsDefault .rsThumb {
+  float: left;
+  overflow: hidden;
+  width: 96px;
+  height: 72px;
+}
+.rsDefault .rsThumb img {
+  width: 100%;
+  height: 100%;
+}
+.rsDefault .rsThumb.rsNavSelected {
+  background: #02874a;
+}
+.rsDefault .rsThumb.rsNavSelected img {
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+}
+.rsDefault .rsTmb {
+  display: block;
+}
+
+/* Thumbnails with text */
+.rsDefault .rsTmb h5 {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  line-height: 20px;
+  color: #FFF;
+}
+.rsDefault .rsTmb span {
+  color: #DDD;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* Thumbnails arrow icons */
+.rsDefault .rsThumbsArrow {
+  height: 100%;
+  width: 20px;
+  position: absolute;
+  display: block;
+  cursor: pointer;  
+  z-index: 21;  
+  background: #000;
+  background: rgba(0,0,0,0.75);
+}
+.rsDefault .rsThumbsArrow:hover {
+  background: rgba(0,0,0,0.9);
+}
+.rsDefault.rsWithThumbsVer .rsThumbsArrow {
+  width: 100%;
+  height: 20px;
+}
+.rsDefault.rsWithThumbsVer .rsThumbsArrowLeft { top: 0; left: 0; }
+.rsDefault.rsWithThumbsVer .rsThumbsArrowRight { bottom: 0;  left: 0; }
+
+.rsDefault.rsWithThumbsHor .rsThumbsArrowLeft { left: 0; top: 0; }
+.rsDefault.rsWithThumbsHor .rsThumbsArrowRight { right: 0; top:0; }
+
+.rsDefault .rsThumbsArrowIcn {    
+  width: 16px;
+  height: 16px;
+  top: 50%;
+  left: 50%;
+  margin-top:-8px;  
+  margin-left: -8px;
+  position: absolute; 
+  cursor: pointer;  
+  background: url('../index_files/rs-default.png');
+}
+
+.rsDefault.rsWithThumbsHor .rsThumbsArrowLeft .rsThumbsArrowIcn { background-position: -128px -32px; }
+.rsDefault.rsWithThumbsHor .rsThumbsArrowRight .rsThumbsArrowIcn { background-position: -128px -48px; }
+
+.rsDefault.rsWithThumbsVer .rsThumbsArrowLeft .rsThumbsArrowIcn { background-position: -144px -32px; }
+.rsDefault.rsWithThumbsVer .rsThumbsArrowRight .rsThumbsArrowIcn { background-position: -144px -48px; }
+
+.rsDefault .rsThumbsArrowDisabled { display: none !important; }
+
+/* Thumbnails resizing on smaller screens */
+@media screen and (min-width: 0px) and (max-width: 800px) {
+  .rsDefault .rsThumb {
+    width: 59px;
+    height: 44px;
+  }
+  .rsDefault .rsThumbsHor {
+    height: 44px;
+  }
+  .rsDefault .rsThumbsVer {
+    width: 59px;
+  }
+}
+
+/***************
+*
+*  4. Tabs
+*
+****************/
+
+.rsDefault .rsTabs {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  text-align:center;
+  overflow: hidden; padding-top: 12px; position: relative;
+}
+.rsDefault .rsTab {
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  height: auto;
+  width: auto;
+  color: #333;
+  padding: 5px 13px 6px;
+  min-width: 72px;
+  border: 1px solid #D9D9DD;
+  border-right: 1px solid #f5f5f5;
+  text-decoration: none;
+
+  background-color: #FFF;
+  background-image: -webkit-linear-gradient(top, #fefefe, #f4f4f4); 
+  background-image:    -moz-linear-gradient(top, #fefefe, #f4f4f4);
+  background-image:         linear-gradient(to bottom, #fefefe, #f4f4f4);
+
+  -webkit-box-shadow: inset 1px 0 0 #fff;
+  box-shadow: inset 1px 0 0 #fff;
+
+  *display:inline; 
+  *zoom:1;
+}
+.rsDefault .rsTab:first-child {
+  -webkit-border-top-left-radius: 4px;
+  border-top-left-radius: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.rsDefault .rsTab:last-child { 
+  -webkit-border-top-right-radius: 4px;
+  border-top-right-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+
+  border-right:  1px solid #cfcfcf;
+}
+.rsDefault .rsTab:active { 
+  border: 1px solid #D9D9DD;   
+  background-color: #f4f4f4;
+  box-shadow:  0 1px 4px rgba(0, 0, 0, 0.2) inset;
+}
+.rsDefault .rsTab.rsNavSelected { 
+  color: #FFF;
+  border: 1px solid #999;
+  text-shadow: 1px 1px #838383;
+  box-shadow: 0 1px 9px rgba(102, 102, 102, 0.65) inset;
+  background: #ACACAC;
+  background-image: -webkit-linear-gradient(top, #ACACAC, #BBB);
+  background-image: -moz-llinear-gradient(top, #ACACAC, #BBB);
+  background-image: linear-gradient(to bottom, #ACACAC, #BBB);
+}
+
+/***************
+*
+*  5. Fullscreen button
+*
+****************/
+
+.rsDefault .rsFullscreenBtn {
+  right: 0;
+  top: 0;
+  width: 44px;
+  height: 44px;
+  z-index: 22;
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  
+}
+.rsDefault .rsFullscreenIcn {
+  display: block;
+  margin: 6px;
+  width: 32px;
+  height: 32px;
+
+  background: url('../index_files/rs-default.png') 0 0;
+  background-color: #000;
+  background-color: rgba(0,0,0,0.75);
+  *background-color: #000;
+  border-radius: 2px;
+
+}
+.rsDefault .rsFullscreenIcn:hover {
+  background-color: rgba(0,0,0,0.9);
+}
+.rsDefault.rsFullscreen .rsFullscreenIcn {
+  background-position: -32px 0;
+}
+
+/***************
+*
+*  6. Play/close video button
+*
+****************/
+
+.rsDefault .rsPlayBtn {
+  -webkit-tap-highlight-color:rgba(0,0,0,0.3);
+  width:64px;
+  height:64px;
+  margin-left:-32px;
+  margin-top:-32px;
+  cursor: pointer;
+}
+.rsDefault .rsPlayBtnIcon {
+  width:64px;
+  display:block;
+  height:64px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  transition: .3s;
+
+  background:url(../index_files/rs-default.png) no-repeat 0 -32px;
+  background-color: #000;
+  background-color: rgba(0,0,0,0.75);
+  *background-color: #000;
+}
+.rsDefault .rsPlayBtn:hover .rsPlayBtnIcon {
+  background-color: rgba(0,0,0,0.9);
+}
+.rsDefault .rsBtnCenterer {
+  position:absolute;
+  left:50%;
+  top:50%;
+}
+.rsDefault .rsCloseVideoBtn {
+  right: 0;
+  top: 0;
+  width: 44px;
+  height: 44px;
+  z-index: 500;
+  position: absolute;
+  cursor: pointer;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  
+}
+.rsDefault .rsCloseVideoBtn.rsiOSBtn {
+  top: -38px;
+  right: -6px;
+}
+
+.rsDefault .rsCloseVideoIcn {
+  margin: 6px;
+  width: 32px;
+  height: 32px;
+  background: url('../index_files/rs-default.png') -64px 0;
+  background-color: #000;
+  background-color: rgba(0,0,0,0.75);
+  *background-color: #000;
+}
+.rsDefault .rsCloseVideoIcn:hover {
+  background-color: rgba(0,0,0,0.9);
+}
+
+/***************
+*
+*  7. Preloader
+*
+****************/
+
+.rsDefault .rsPreloader {
+  width:20px;
+  height:20px;
+/*  background-image:url(../preloaders/preloader-white.gif);*/
+  left:50%;
+  top:50%;
+  margin-left:-10px;
+  margin-top:-10px; 
+}
+
+/***************
+*
+*  8. Global caption
+*
+****************/
+.rsDefault .rsGCaption {
+  position: absolute;
+  float: none;
+  bottom: 6px;
+  left: 6px;
+  text-align: left;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.75);
+  color: #FFF;
+  padding: 2px 8px;
+  width: auto;
+  font-size: 12px;
+  border-radius: 2px;
+}
+
+/**** Isotope Filtering ****/
+.isotope-item { z-index: 2; }
+
+.isotope-hidden.isotope-item { pointer-events: none; z-index: 1; }
+
+/**** Isotope CSS3 transitions ****/
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:      -o-transform, opacity;
+          transition-property:         transform, opacity;
+}
+
+[data-cols="cols-1"] .prtfl-item { width: 100% !important; }
+[data-cols="cols-2"] .prtfl-item { width: 50% !important; }
+[data-cols="cols-3"] .prtfl-item { width: 33.33% !important; }
+[data-cols="cols-4"] .prtfl-item { width: 25% !important; }
+[data-cols="cols-5"] .prtfl-item { width: 20% !important; }
+.prtfl-item img { width: 100.5%; max-width: 100.5%; }
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
+/*!
+ *  Font Awesome 4.0.3 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+ @font-face{
+  font-family:'FontAwesome';
+  src:url('../fonts/fontawesome-webfont.eot?v=4.0.3');
+  src:url('../fonts/fontawesome-webfont.eot?#iefix&v=4.0.3') format('embedded-opentype'),
+  url('../fonts/fontawesome-webfont.woff?v=4.0.3') format('woff'),
+  url('../fonts/fontawesome-webfont.ttf?v=4.0.3') format('truetype'),
+  url('../fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular') format('svg');
+  font-weight:normal;font-style:normal}
+
+.fa{display:inline-block;font-family:FontAwesome;font-style:normal;font-weight:normal;font-size:24px;color:#fff;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.fa-lg{font-size:1.3333333333333333em;line-height:.75em;vertical-align:-15%}.fa-2x{font-size:2em}.fa-3x{font-size:3em}.fa-4x{font-size:4em}.fa-5x{font-size:5em}.fa-fw{width:1.2857142857142858em;text-align:center}.fa-ul{padding-left:0;margin-left:2.142857142857143em;list-style-type:none}.fa-ul>li{position:relative}.fa-li{position:absolute;left:-2.142857142857143em;width:2.142857142857143em;top:.14285714285714285em;text-align:center}.fa-li.fa-lg{left:-1.8571428571428572em}.fa-border{padding:.2em .25em .15em;border:solid .08em #eee;border-radius:.1em}.pull-right{float:right}.pull-left{float:left}.fa.pull-left{margin-right:.3em}.fa.pull-right{margin-left:.3em}.fa-spin,.product .add_to_cart_button.loading:before{-webkit-animation:spin 2s infinite linear;-moz-animation:spin 2s infinite linear;-o-animation:spin 2s infinite linear;animation:spin 2s infinite linear}@-moz-keyframes spin{0%{-moz-transform:rotate(0deg)}100%{-moz-transform:rotate(359deg)}}@-webkit-keyframes spin{0%{-webkit-transform:rotate(0deg)}100%{-webkit-transform:rotate(359deg)}}@-o-keyframes spin{0%{-o-transform:rotate(0deg)}100%{-o-transform:rotate(359deg)}}@-ms-keyframes spin{0%{-ms-transform:rotate(0deg)}100%{-ms-transform:rotate(359deg)}}@keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(359deg)}}.fa-rotate-90{filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1);-webkit-transform:rotate(90deg);-moz-transform:rotate(90deg);-ms-transform:rotate(90deg);-o-transform:rotate(90deg);transform:rotate(90deg)}.fa-rotate-180{filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2);-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-ms-transform:rotate(180deg);-o-transform:rotate(180deg);transform:rotate(180deg)}.fa-rotate-270{filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=3);-webkit-transform:rotate(270deg);-moz-transform:rotate(270deg);-ms-transform:rotate(270deg);-o-transform:rotate(270deg);transform:rotate(270deg)}.fa-flip-horizontal{filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=0,mirror=1);-webkit-transform:scale(-1,1);-moz-transform:scale(-1,1);-ms-transform:scale(-1,1);-o-transform:scale(-1,1);transform:scale(-1,1)}.fa-flip-vertical{filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2,mirror=1);-webkit-transform:scale(1,-1);-moz-transform:scale(1,-1);-ms-transform:scale(1,-1);-o-transform:scale(1,-1);transform:scale(1,-1)}.fa-stack{position:relative;display:inline-block;width:2em;height:2em;line-height:2em;vertical-align:middle}.fa-stack-1x,.fa-stack-2x{position:absolute;left:0;width:100%;text-align:center}.fa-stack-1x{line-height:inherit}.fa-stack-2x{font-size:2em}.fa-inverse{color:#fff}.fa-glass:before{content:"\f000"}.fa-music:before{content:"\f001"}.fa-search:before{content:"\f002"}.fa-envelope-o:before{content:"\f003"}.fa-heart:before{content:"\f004"}.fa-star:before{content:"\f005"}.fa-star-o:before{content:"\f006"}.fa-user:before{content:"\f007"}.fa-film:before{content:"\f008"}.fa-th-large:before{content:"\f009"}.fa-th:before{content:"\f00a"}.fa-th-list:before{content:"\f00b"}.fa-check:before{content:"\f00c"}.fa-times:before{content:"\f00d"}.fa-search-plus:before{content:"\f00e"}.fa-search-minus:before{content:"\f010"}.fa-power-off:before{content:"\f011"}.fa-signal:before{content:"\f012"}.fa-gear:before,.fa-cog:before{content:"\f013"}.fa-trash-o:before{content:"\f014"}.fa-home:before{content:"\f015"}.fa-file-o:before{content:"\f016"}.fa-clock-o:before{content:"\f017"}.fa-road:before{content:"\f018"}.fa-download:before{content:"\f019"}.fa-arrow-circle-o-down:before{content:"\f01a"}.fa-arrow-circle-o-up:before{content:"\f01b"}.fa-inbox:before{content:"\f01c"}.fa-play-circle-o:before{content:"\f01d"}.fa-rotate-right:before,.fa-repeat:before{content:"\f01e"}.fa-refresh:before{content:"\f021"}.fa-list-alt:before{content:"\f022"}.fa-lock:before{content:"\f023"}.fa-flag:before{content:"\f024"}.fa-headphones:before{content:"\f025"}.fa-volume-off:before{content:"\f026"}.fa-volume-down:before{content:"\f027"}.fa-volume-up:before{content:"\f028"}.fa-qrcode:before{content:"\f029"}.fa-barcode:before{content:"\f02a"}.fa-tag:before{content:"\f02b"}.fa-tags:before{content:"\f02c"}.fa-book:before{content:"\f02d"}.fa-bookmark:before{content:"\f02e"}.fa-print:before{content:"\f02f"}.fa-camera:before{content:"\f030"}.fa-font:before{content:"\f031"}.fa-bold:before{content:"\f032"}.fa-italic:before{content:"\f033"}.fa-text-height:before{content:"\f034"}.fa-text-width:before{content:"\f035"}.fa-align-left:before{content:"\f036"}.fa-align-center:before{content:"\f037"}.fa-align-right:before{content:"\f038"}.fa-align-justify:before{content:"\f039"}.fa-list:before{content:"\f03a"}.fa-dedent:before,.fa-outdent:before{content:"\f03b"}.fa-indent:before{content:"\f03c"}.fa-video-camera:before{content:"\f03d"}.fa-picture-o:before{content:"\f03e"}.fa-pencil:before{content:"\f040"}.fa-map-marker:before{content:"\f041"}.fa-adjust:before{content:"\f042"}.fa-tint:before{content:"\f043"}.fa-edit:before,.fa-pencil-square-o:before{content:"\f044"}.fa-share-square-o:before{content:"\f045"}.fa-check-square-o:before{content:"\f046"}.fa-arrows:before{content:"\f047"}.fa-step-backward:before{content:"\f048"}.fa-fast-backward:before{content:"\f049"}.fa-backward:before{content:"\f04a"}.fa-play:before{content:"\f04b"}.fa-pause:before{content:"\f04c"}.fa-stop:before{content:"\f04d"}.fa-forward:before{content:"\f04e"}.fa-fast-forward:before{content:"\f050"}.fa-step-forward:before{content:"\f051"}.fa-eject:before{content:"\f052"}.fa-chevron-left:before{content:"\f053"}.fa-chevron-right:before{content:"\f054"}.fa-plus-circle:before{content:"\f055"}.fa-minus-circle:before{content:"\f056"}.fa-times-circle:before{content:"\f057"}.fa-check-circle:before{content:"\f058"}.fa-question-circle:before{content:"\f059"}.fa-info-circle:before{content:"\f05a"}.fa-crosshairs:before{content:"\f05b"}.fa-times-circle-o:before{content:"\f05c"}.fa-check-circle-o:before{content:"\f05d"}.fa-ban:before{content:"\f05e"}.fa-arrow-left:before{content:"\f060"}.fa-arrow-right:before{content:"\f061"}.fa-arrow-up:before{content:"\f062"}.fa-arrow-down:before{content:"\f063"}.fa-mail-forward:before,.fa-share:before{content:"\f064"}.fa-expand:before{content:"\f065"}.fa-compress:before{content:"\f066"}.fa-plus:before{content:"\f067"}.fa-minus:before{content:"\f068"}.fa-asterisk:before{content:"\f069"}.fa-exclamation-circle:before{content:"\f06a"}.fa-gift:before{content:"\f06b"}.fa-leaf:before{content:"\f06c"}.fa-fire:before{content:"\f06d"}.fa-eye:before{content:"\f06e"}.fa-eye-slash:before{content:"\f070"}.fa-warning:before,.fa-exclamation-triangle:before{content:"\f071"}.fa-plane:before{content:"\f072"}.fa-calendar:before{content:"\f073"}.fa-random:before{content:"\f074"}.fa-comment:before{content:"\f075"}.fa-magnet:before{content:"\f076"}.fa-chevron-up:before{content:"\f077"}.fa-chevron-down:before{content:"\f078"}.fa-retweet:before{content:"\f079"}.fa-shopping-cart:before{content:"\f07a"}.fa-folder:before{content:"\f07b"}.fa-folder-open:before{content:"\f07c"}.fa-arrows-v:before{content:"\f07d"}.fa-arrows-h:before{content:"\f07e"}.fa-bar-chart-o:before{content:"\f080"}.fa-twitter-square:before{content:"\f081"}.fa-facebook-square:before{content:"\f082"}.fa-camera-retro:before{content:"\f083"}.fa-key:before{content:"\f084"}.fa-gears:before,.fa-cogs:before{content:"\f085"}.fa-comments:before{content:"\f086"}.fa-thumbs-o-up:before{content:"\f087"}.fa-thumbs-o-down:before{content:"\f088"}.fa-star-half:before{content:"\f089"}.fa-heart-o:before{content:"\f08a"}.fa-sign-out:before{content:"\f08b"}.fa-linkedin-square:before{content:"\f08c"}.fa-thumb-tack:before{content:"\f08d"}.fa-external-link:before{content:"\f08e"}.fa-sign-in:before{content:"\f090"}.fa-trophy:before{content:"\f091"}.fa-github-square:before{content:"\f092"}.fa-upload:before{content:"\f093"}.fa-lemon-o:before{content:"\f094"}.fa-phone:before{content:"\f095"}.fa-square-o:before{content:"\f096"}.fa-bookmark-o:before{content:"\f097"}.fa-phone-square:before{content:"\f098"}.fa-twitter:before{content:"\f099"}.fa-facebook:before{content:"\f09a"}.fa-github:before{content:"\f09b"}.fa-unlock:before{content:"\f09c"}.fa-credit-card:before{content:"\f09d"}.fa-rss:before{content:"\f09e"}.fa-hdd-o:before{content:"\f0a0"}.fa-bullhorn:before{content:"\f0a1"}.fa-bell:before{content:"\f0f3"}.fa-certificate:before{content:"\f0a3"}.fa-hand-o-right:before{content:"\f0a4"}.fa-hand-o-left:before{content:"\f0a5"}.fa-hand-o-up:before{content:"\f0a6"}.fa-hand-o-down:before{content:"\f0a7"}.fa-arrow-circle-left:before{content:"\f0a8"}.fa-arrow-circle-right:before{content:"\f0a9"}.fa-arrow-circle-up:before{content:"\f0aa"}.fa-arrow-circle-down:before{content:"\f0ab"}.fa-globe:before{content:"\f0ac"}.fa-wrench:before{content:"\f0ad"}.fa-tasks:before{content:"\f0ae"}.fa-filter:before{content:"\f0b0"}.fa-briefcase:before{content:"\f0b1"}.fa-arrows-alt:before{content:"\f0b2"}.fa-group:before,.fa-users:before{content:"\f0c0"}.fa-chain:before,.fa-link:before{content:"\f0c1"}.fa-cloud:before{content:"\f0c2"}.fa-flask:before{content:"\f0c3"}.fa-cut:before,.fa-scissors:before{content:"\f0c4"}.fa-copy:before,.fa-files-o:before{content:"\f0c5"}.fa-paperclip:before{content:"\f0c6"}.fa-save:before,.fa-floppy-o:before{content:"\f0c7"}.fa-square:before{content:"\f0c8"}.fa-bars:before{content:"\f0c9"}.fa-list-ul:before{content:"\f0ca"}.fa-list-ol:before{content:"\f0cb"}.fa-strikethrough:before{content:"\f0cc"}.fa-underline:before{content:"\f0cd"}.fa-table:before{content:"\f0ce"}.fa-magic:before{content:"\f0d0"}.fa-truck:before{content:"\f0d1"}.fa-pinterest:before{content:"\f0d2"}.fa-pinterest-square:before{content:"\f0d3"}.fa-google-plus-square:before{content:"\f0d4"}.fa-google-plus:before{content:"\f0d5"}.fa-money:before{content:"\f0d6"}.fa-caret-down:before{content:"\f0d7"}.fa-caret-up:before{content:"\f0d8"}.fa-caret-left:before{content:"\f0d9"}.fa-caret-right:before{content:"\f0da"}.fa-columns:before{content:"\f0db"}.fa-unsorted:before,.fa-sort:before{content:"\f0dc"}.fa-sort-down:before,.fa-sort-asc:before{content:"\f0dd"}.fa-sort-up:before,.fa-sort-desc:before{content:"\f0de"}.fa-envelope:before{content:"\f0e0"}.fa-linkedin:before{content:"\f0e1"}.fa-rotate-left:before,.fa-undo:before{content:"\f0e2"}.fa-legal:before,.fa-gavel:before{content:"\f0e3"}.fa-dashboard:before,.fa-tachometer:before{content:"\f0e4"}.fa-comment-o:before{content:"\f0e5"}.fa-comments-o:before{content:"\f0e6"}.fa-flash:before,.fa-bolt:before{content:"\f0e7"}.fa-sitemap:before{content:"\f0e8"}.fa-umbrella:before{content:"\f0e9"}.fa-paste:before,.fa-clipboard:before{content:"\f0ea"}.fa-lightbulb-o:before{content:"\f0eb"}.fa-exchange:before{content:"\f0ec"}.fa-cloud-download:before{content:"\f0ed"}.fa-cloud-upload:before{content:"\f0ee"}.fa-user-md:before{content:"\f0f0"}.fa-stethoscope:before{content:"\f0f1"}.fa-suitcase:before{content:"\f0f2"}.fa-bell-o:before{content:"\f0a2"}.fa-coffee:before{content:"\f0f4"}.fa-cutlery:before{content:"\f0f5"}.fa-file-text-o:before{content:"\f0f6"}.fa-building-o:before{content:"\f0f7"}.fa-hospital-o:before{content:"\f0f8"}.fa-ambulance:before{content:"\f0f9"}.fa-medkit:before{content:"\f0fa"}.fa-fighter-jet:before{content:"\f0fb"}.fa-beer:before{content:"\f0fc"}.fa-h-square:before{content:"\f0fd"}.fa-plus-square:before{content:"\f0fe"}.fa-angle-double-left:before{content:"\f100"}.fa-angle-double-right:before{content:"\f101"}.fa-angle-double-up:before{content:"\f102"}.fa-angle-double-down:before{content:"\f103"}.fa-angle-left:before{content:"\f104"}.fa-angle-right:before{content:"\f105"}.fa-angle-up:before{content:"\f106"}.fa-angle-down:before{content:"\f107"}.fa-desktop:before{content:"\f108"}.fa-laptop:before{content:"\f109"}.fa-tablet:before{content:"\f10a"}.fa-mobile-phone:before,.fa-mobile:before{content:"\f10b"}.fa-circle-o:before{content:"\f10c"}.fa-quote-left:before{content:"\f10d"}.fa-quote-right:before{content:"\f10e"}.fa-spinner:before{content:"\f110"}.fa-circle:before{content:"\f111"}.fa-mail-reply:before,.fa-reply:before{content:"\f112"}.fa-github-alt:before{content:"\f113"}.fa-folder-o:before{content:"\f114"}.fa-folder-open-o:before{content:"\f115"}.fa-smile-o:before{content:"\f118"}.fa-frown-o:before{content:"\f119"}.fa-meh-o:before{content:"\f11a"}.fa-gamepad:before{content:"\f11b"}.fa-keyboard-o:before{content:"\f11c"}.fa-flag-o:before{content:"\f11d"}.fa-flag-checkered:before{content:"\f11e"}.fa-terminal:before{content:"\f120"}.fa-code:before{content:"\f121"}.fa-reply-all:before{content:"\f122"}.fa-mail-reply-all:before{content:"\f122"}.fa-star-half-empty:before,.fa-star-half-full:before,.fa-star-half-o:before{content:"\f123"}.fa-location-arrow:before{content:"\f124"}.fa-crop:before{content:"\f125"}.fa-code-fork:before{content:"\f126"}.fa-unlink:before,.fa-chain-broken:before{content:"\f127"}.fa-question:before{content:"\f128"}.fa-info:before{content:"\f129"}.fa-exclamation:before{content:"\f12a"}.fa-superscript:before{content:"\f12b"}.fa-subscript:before{content:"\f12c"}.fa-eraser:before{content:"\f12d"}.fa-puzzle-piece:before{content:"\f12e"}.fa-microphone:before{content:"\f130"}.fa-microphone-slash:before{content:"\f131"}.fa-shield:before{content:"\f132"}.fa-calendar-o:before{content:"\f133"}.fa-fire-extinguisher:before{content:"\f134"}.fa-rocket:before{content:"\f135"}.fa-maxcdn:before{content:"\f136"}.fa-chevron-circle-left:before{content:"\f137"}.fa-chevron-circle-right:before{content:"\f138"}.fa-chevron-circle-up:before{content:"\f139"}.fa-chevron-circle-down:before{content:"\f13a"}.fa-html5:before{content:"\f13b"}.fa-css3:before{content:"\f13c"}.fa-anchor:before{content:"\f13d"}.fa-unlock-alt:before{content:"\f13e"}.fa-bullseye:before{content:"\f140"}.fa-ellipsis-h:before{content:"\f141"}.fa-ellipsis-v:before{content:"\f142"}.fa-rss-square:before{content:"\f143"}.fa-play-circle:before{content:"\f144"}.fa-ticket:before{content:"\f145"}.fa-minus-square:before{content:"\f146"}.fa-minus-square-o:before{content:"\f147"}.fa-level-up:before{content:"\f148"}.fa-level-down:before{content:"\f149"}.fa-check-square:before{content:"\f14a"}.fa-pencil-square:before{content:"\f14b"}.fa-external-link-square:before{content:"\f14c"}.fa-share-square:before{content:"\f14d"}.fa-compass:before{content:"\f14e"}.fa-toggle-down:before,.fa-caret-square-o-down:before{content:"\f150"}.fa-toggle-up:before,.fa-caret-square-o-up:before{content:"\f151"}.fa-toggle-right:before,.fa-caret-square-o-right:before{content:"\f152"}.fa-euro:before,.fa-eur:before{content:"\f153"}.fa-gbp:before{content:"\f154"}.fa-dollar:before,.fa-usd:before{content:"\f155"}.fa-rupee:before,.fa-inr:before{content:"\f156"}.fa-cny:before,.fa-rmb:before,.fa-yen:before,.fa-jpy:before{content:"\f157"}.fa-ruble:before,.fa-rouble:before,.fa-rub:before{content:"\f158"}.fa-won:before,.fa-krw:before{content:"\f159"}.fa-bitcoin:before,.fa-btc:before{content:"\f15a"}.fa-file:before{content:"\f15b"}.fa-file-text:before{content:"\f15c"}.fa-sort-alpha-asc:before{content:"\f15d"}.fa-sort-alpha-desc:before{content:"\f15e"}.fa-sort-amount-asc:before{content:"\f160"}.fa-sort-amount-desc:before{content:"\f161"}.fa-sort-numeric-asc:before{content:"\f162"}.fa-sort-numeric-desc:before{content:"\f163"}.fa-thumbs-up:before{content:"\f164"}.fa-thumbs-down:before{content:"\f165"}.fa-youtube-square:before{content:"\f166"}.fa-youtube:before{content:"\f167"}.fa-xing:before{content:"\f168"}.fa-xing-square:before{content:"\f169"}.fa-youtube-play:before{content:"\f16a"}.fa-dropbox:before{content:"\f16b"}.fa-stack-overflow:before{content:"\f16c"}.fa-instagram:before{content:"\f16d"}.fa-flickr:before{content:"\f16e"}.fa-adn:before{content:"\f170"}.fa-bitbucket:before{content:"\f171"}.fa-bitbucket-square:before{content:"\f172"}.fa-tumblr:before{content:"\f173"}.fa-tumblr-square:before{content:"\f174"}.fa-long-arrow-down:before{content:"\f175"}.fa-long-arrow-up:before{content:"\f176"}.fa-long-arrow-left:before{content:"\f177"}.fa-long-arrow-right:before{content:"\f178"}.fa-apple:before{content:"\f179"}.fa-windows:before{content:"\f17a"}.fa-android:before{content:"\f17b"}.fa-linux:before{content:"\f17c"}.fa-dribbble:before{content:"\f17d"}.fa-skype:before{content:"\f17e"}.fa-foursquare:before{content:"\f180"}.fa-trello:before{content:"\f181"}.fa-female:before{content:"\f182"}.fa-male:before{content:"\f183"}.fa-gittip:before{content:"\f184"}.fa-sun-o:before{content:"\f185"}.fa-moon-o:before{content:"\f186"}.fa-archive:before{content:"\f187"}.fa-bug:before{content:"\f188"}.fa-vk:before{content:"\f189"}.fa-weibo:before{content:"\f18a"}.fa-renren:before{content:"\f18b"}.fa-pagelines:before{content:"\f18c"}.fa-stack-exchange:before{content:"\f18d"}.fa-arrow-circle-o-right:before{content:"\f18e"}.fa-arrow-circle-o-left:before{content:"\f190"}.fa-toggle-left:before,.fa-caret-square-o-left:before{content:"\f191"}.fa-dot-circle-o:before{content:"\f192"}.fa-wheelchair:before{content:"\f193"}.fa-vimeo-square:before{content:"\f194"}.fa-turkish-lira:before,.fa-try:before{content:"\f195"}.fa-plus-square-o:before{content:"\f196"}
+
+ .fa.break {
+  display: block;
+  margin-bottom: 9px;
+}
+
+/*Fontastic*/
+@font-face {
+  font-family: "lobo";
+  src:url("../index_files/css/icons/lobo.eot");
+  src:url("../index_files/css/icons/lobo.eot?#iefix") format("embedded-opentype"),
+url("../index_files/css/icons/lobo.woff") format("woff"),
+url("../index_files/css/icons/lobo.ttf") format("truetype"),
+url("../index_files/css/icons/lobo.svg#lobo") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[data-icon]:before {
+  font-family: "lobo" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "lobo" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-bag:before {
+  content: "a";
+}
+.icon-heart:before {
+  content: "b";
+}
+.icon-heart-empty:before {
+  content: "c";
+}
+.icon-menu:before {
+  content: "d";
+}
+.icon-bag-1:before {
+  content: "e";
+}
+.icon-flick-left:before {
+  content: "i";
+}
+.icon-horizontal-swipe:before {
+  content: "j";
+}
+.icon-up-open-big:before {
+  content: "k";
+}
+.icon-fontawesome-webfont-6:before {
+  content: "r";
+}
+.icon-fontawesome-webfont-7:before {
+  content: "s";
+}
+.icon-fontawesome-webfont-8:before {
+  content: "t";
+}
+.icon-fontawesome-webfont-13:before {
+  content: "y";
+}
+.icon-down-open-big:before {
+  content: "z";
+}
+.icon-down-open-mini:before {
+  content: "A";
+}
+.icon-left-open-mini:before {
+  content: "D";
+}
+.icon-left-open-big:before {
+  content: "E";
+}
+.icon-link:before {
+  content: "G";
+}
+.icon-popup:before {
+  content: "J";
+}
+.icon-resize-full:before {
+  content: "K";
+}
+.icon-resize-small:before {
+  content: "L";
+}
+.icon-right-open-big:before {
+  content: "N";
+}
+.icon-right-open-mini:before {
+  content: "M";
+}
+.icon-share:before {
+  content: "O";
+}
+.icon-shuffle:before {
+  content: "P";
+}
+.icon-behance:before {
+  content: "W";
+}
+.icon-facebook:before {
+  content: "X";
+}
+.icon-evernote:before {
+  content: "Y";
+}
+.icon-dribbble:before {
+  content: "Z";
+}
+.icon-forrst:before {
+  content: "0";
+}
+.icon-github:before {
+  content: "1";
+}
+.icon-grooveshark:before {
+  content: "2";
+}
+.icon-last:before {
+  content: "3";
+}
+.icon-linkedin:before {
+  content: "4";
+}
+.icon-paypal:before {
+  content: "5";
+}
+.icon-myspace:before {
+  content: "6";
+}
+.icon-skype:before {
+  content: "7";
+}
+.icon-soundcloud:before {
+  content: "8";
+}
+.icon-spotify:before {
+  content: "9";
+}
+.icon-tumblr-1:before {
+  content: "!";
+}
+.icon-twitter:before {
+  content: "\"";
+}
+.icon-vimeo:before {
+  content: "#";
+}
+.icon-whatsapp:before {
+  content: "$";
+}
+.icon-youtube:before {
+  content: "%";
+}
+.icon-google:before {
+  content: "f";
+}
+.icon-gplus:before {
+  content: "g";
+}
+.icon-google-circles:before {
+  content: "h";
+}
+.icon-social-pinterest:before {
+  content: "l";
+}
+.icon-pinterest:before {
+  content: "m";
+}
+.icon-pause:before {
+  content: "n";
+}
+.icon-play:before {
+  content: "o";
+}
+.icon-volume:before {
+  content: "p";
+}
+.icon-volume-none:before {
+  content: "q";
+}
+.icon-fontawesome-webfont:before {
+  content: "u";
+}
+.icon-fontawesome-webfont-1:before {
+  content: "v";
+}
+.icon-reddit:before {
+  content: "w";
+}
+.icon-instagram:before {
+  content: "x";
+}
+.icon-flickr:before {
+  content: "B";
+}
+
+.wp-caption, .wp-caption-text, .gallery-caption, .aligncenter {
+  
+}
+
+/* ---------------------------
+   ------- WOOCOMMERCE -------
+ --------------------------- */
+
+ /* Hide some basic stuff */
+.woocommerce {
+  #content {
+    .page-title {
+      display: none;
+    }
+    .woocommerce-result-count {
+      display: none;
+    }
+    .woocommerce-ordering {
+      display: none;
+    }
+  }
+  #content-wrapper {
+    background: $white;
+  }
+  .blog-actions {
+    left: 0;
+    bottom: auto;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    > div {
+      display: table;
+      height: 100%;
+      width: 100%;
+      > div {
+        display: table-cell;
+        vertical-align: middle;
+        padding-top: 40px;
+      }
+    }
+  }
+  .blog-categories {
+    max-width: 800px;
+    margin: auto;
+  }
+  .blog-action-search {
+    max-width: 800px;
+    margin: auto;
+  }
+  .lobo-tabs .contents {
+    background: $color_cararra_75_approx;
+    table {
+      border: none;
+      tr {
+        border: none;
+      }
+    }
+  }
+  p.lost_password {
+    font-size: 14px;
+    border-bottom: 1px dotted $color_pink_swan_approx;
+    padding-bottom: 1px;
+    display: inline;
+    &:hover {
+      color: $black;
+    }
+  }
+  .addresses.col2-set div {
+    float: none;
+    padding: 0;
+    &:first-child {
+      margin-bottom: 35px;
+    }
+  }
+  .wcp-subtitle a:hover {
+    color: $black;
+  }
+  > .login .p-form div.clear + p.form-row {
+    text-align: center;
+  }
+}
+.woocommerce-page {
+  .item-hover {
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0 solid transparent;
+      background: transparent;
+      content: '';
+      //Instead of the line below you could use @includetransition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: border-width 0.2s, border-color 0.2s;
+      //Instead of the line below you could use @includebox-sizing($bs)
+      box-sizing: border-box;
+    }
+    &:hover {
+      opacity: 1 !important;
+      &:before {
+        border-width: 15px;
+        border-color: $color_laser_lemon_approx;
+      }
+    }
+  }
+  .post-wrapper {
+    padding: 60px 0;
+    background: $url_53 repeat 0 0 transparent;
+    background-attachment: fixed;
+  }
+  .the-post {
+    padding: 0 5%;
+    max-width: 1400px;
+    //Instead of the line below you could use @includebox-sizing($bs)
+    box-sizing: border-box;
+    h2 {
+      @extend %extend_62;
+    }
+    > article {
+      width: 100%;
+      margin: 0;
+    }
+  }
+  .lobo-tabs {
+    text-align: center;
+    h3 {
+      display: none;
+      &.wcp-title {
+        display: block;
+      }
+    }
+  }
+  .post-excerpt {
+    p {
+      font-size: 15px;
+      font-weight: normal;
+      line-height: 25px;
+    }
+    h2 {
+      margin: 50px 0 0;
+    }
+    .wcp-title {
+      margin: 0;
+    }
+  }
+  .modal-backdrop.in {
+    opacity: 0;
+  }
+  .post-body > h2 {
+    display: none;
+  }
+  &.woocommerce-cart .lobo-tabs {
+    margin-top: 80px;
+  }
+  input[type="submit"]:hover {
+    background: $color_mine_shaft_approx;
+  }
+  button:hover {
+    background: $color_mine_shaft_approx;
+  }
+}
+
+
+
+.onsale {
+	position: absolute;
+	width: 70px;
+	height: 70px;
+	background: #000;
+	color: #FFF75F;
+	top: 10px;
+	right: 10px;
+	text-align: center;
+	font-size: 12px;
+	line-height: 70px;
+  font-weight: 700;
+  letter-spacing: 1px;
+	text-transform: uppercase;
+	vertical-align: bottom;
+	z-index: 9;
+}
+li.product .price {
+	width: auto;
+  color: #171717;
+  display: inline-block;
+  position: relative;
+  font-size: 57px;
+  font-weight: 700;
+  text-align: center;
+}
+li.product .price del {
+	position: absolute;
+	top: -15px;
+	font-size: 16px;
+	color: #666;
+	width: 100%;	
+	left: 0;
+  opacity: 0.3;
+}
+li.product .price del + ins {
+	top: 5px;
+	position: relative;
+}
+li.product .price ins {
+	text-decoration: none;
+}
+li.product .item-title {
+	padding-top: 20px !important;
+	font-size: 21px !important;
+	line-height: 28px !important;
+	font-weight: 800 !important;
+	display: block;
+}
+li.product .item-cat {
+	color: #121212;
+  font-size: 17px;
+  line-height: 28px;
+  font-weight: 400;
+  font-style: italic;
+  display: block;
+  margin: 0px 0 25px;
+}
+li.product .button {
+	position: relative;
+  display: inline-block;
+  height: 30px;
+  font-size: 13px;
+  line-height: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  background: #000;
+  color: #FFF;
+  padding: 0 40px;
+}
+li.product .view_button {
+	background: #FFF75F;
+	color: #272727;
+	margin-right: -5px;
+}
+li.product .star-rating, li.product .added_to_cart {
+	display: none !important;
+}
+li.product .add_to_cart_button:hover {
+	color: #fff;
+}
+li.product .add_to_cart_button.loading:before {
+   content: "\f110";
+   font-size: 18px;
+   font-weight: 400;
+   font-family: 'FontAwesome';
+   position: absolute;
+   left: 0;
+   text-align: center;
+   width: 100%;
+   color: #fff;
+}
+li.product .add_to_cart_button.added:before {
+   content: "\f00c";
+   font-family: 'FontAwesome';
+   font-weight: 400;
+   font-size: 17px;
+   position: absolute;
+   left: 0;
+   text-align: center;
+   width: 100%;
+   color: #fff;
+}
+li.product .add_to_cart_button.loading, li.product .add_to_cart_button.added {
+   cursor: default;
+   color: #000;
+}
+
+li.product.small-product-thumb .price { font-size: 30px; }
+li.product.small-product-thumb .item-title { padding-top: 5px !important; font-size: 15px !important; line-height: 25px !important; }
+li.product.small-product-thumb .item-cat { font-size: 15px; line-height: 28px; margin: 0px 0 13px; }
+li.product.small-product-thumb .button { height: 25px; line-height: 25px; padding: 0 35px; }
+
+/* Single Product */
+
+.single-product .onsale {
+	right: auto;
+	left: 10px;
+}
+.single-product .images {
+	width: 50%;
+	float: left;
+	position: relative;
+}
+.single-product .images .module {
+	width: 100%;
+	height: auto;
+}
+.single-product .images .rsBullets {
+	bottom: 20px;
+}
+.single-product .images .thumbnails {
+	width: 100%;
+	max-width: 100%;
+	position: absolute;
+	text-align: center;
+	bottom: 51px;
+	left: 0;
+}
+.single-product .images .thumbnails > div {
+	position: relative;
+	width: 100%;
+	max-width: 100%;
+	margin: 0 auto;
+}
+.single-product .images .thumbnails .fancybox {
+	border: 5px solid #cacaca;
+	margin-right: -5px;
+	display: inline-block;
+	width: 25%;
+	max-width: 114px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.fancybox-thumb img {
+	max-width: 100%;
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+
+.single-product .product-content {
+	width: 50%;
+	padding: 40px 0;
+	float: right;
+}
+.single-product .product-content .copy {
+	width: 90% !important;
+}
+.single-product .entry-summary {
+	position: relative;
+	padding-top: 50px;
+	margin-right: 140px;
+}
+.single-product .module div.copy .price {
+	font-size: 31px;
+	line-height: 31px;
+	font-weight: 800;
+	top: 0;
+	position: absolute;
+	display: block;
+}
+.single-product .module div.copy .stock {
+	position: absolute;
+	top: 31px;
+	color: #52F0A4;
+}
+.single-product .module div.copy .out-of-stock { color: #F01158; }
+.single-product .module .price ins {
+	text-decoration: none;
+}
+.single-product .module .price del {
+	position: absolute;
+	font-size: 22px;
+	line-height: 22px;
+	color: #ccc;
+	top: -25px;
+}
+.woocommerce-breadcrumb {
+	font-size: 13px;
+	line-height: 13px;
+	text-transform: uppercase;
+	font-weight: 800;
+	color: #6c6c6c;
+	margin: 5px 0 10px;
+}
+.tax-product_cat .woocommerce-breadcrumb,
+.tax-product_tag .woocommerce-breadcrumb { padding: 25px 0 23px 0; text-align: center; }
+.woocommerce-breadcrumb a, .woocommerce-breadcrumb span {
+	color: #bdbdbd;
+}
+.single-product .module .product_title {
+	font-size: 19px;
+	line-height: 16px;
+	text-transform: uppercase;
+	font-weight: 800;
+	color: #202020;
+}
+.single-product .woocommerce-product-rating {
+	display: none; 
+}
+.single-product .cart, .single-product .cart.variations_form .single_variation_wrap {
+	position: absolute;
+	top: 0;
+	right: -140px;
+	width: 140px;
+}
+.single-product .cart input, .product-quantity input {
+	background: transparent !important;
+	color: #202020 !important;
+	height: 37px;
+	float: left;
+	border: none;
+	outline: none;
+	margin-left: 1px;
+	padding: 0;
+	text-align: center;
+}
+.single-product .cart .minus, .single-product .cart .plus, .product-quantity .minus, .product-quantity .plus {
+	width: 36px;
+	font-size: 0;
+	border: 3px solid transparent;
+	position: relative;
+	z-index: 9;
+}
+.single-product .cart .minus, .product-quantity .minus {
+	margin-left: 0;
+}
+.single-product .cart .quantity, .product-quantity .quantity {
+	position: relative;
+}
+.single-product .cart .quantity:before, .single-product .cart .quantity:after, .product-quantity .quantity:before, .product-quantity .quantity:after {
+	font-family: 'FontAwesome' !important;
+	position: absolute;
+	content: "\f067";
+	font-size: 14px;
+	line-height: 40px;
+	width: 36px;
+	height: 37px;
+	font-weight: 400;
+	text-align: center;
+	right: 0;
+	background: #E9EDEF;
+}
+.single-product .cart .quantity:before, .product-quantity .quantity:before {
+	content: "\f068";
+	left: 0;
+	right: auto;
+}
+.single-product .cart .input-text, .product-quantity .input-text {
+	width: 66px;
+	font-size: 17px;
+	line-height: 17px;
+	font-weight: 700;
+	background: #E9EDEF !important;
+   -webkit-appearance: textfield;
+   -moz-appearance:    textfield;
+   appearance:         textfield;
+}
+.single-product .cart .input-text::-webkit-outer-spin-button,
+.single-product .cart .input-text::-webkit-inner-spin-button, 
+.product-quantity .input-text::-webkit-outer-spin-button,
+.product-quantity .input-text::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.single_add_to_cart_button {
+	outline: none !important;
+	border: none !important;
+	font-size: 13px;
+	line-height: 13px;
+	text-transform: uppercase;
+	font-weight: 800;
+	color: #202020;
+	text-align: center;
+	width: 140px;
+	height: 50px;
+	margin-top: 1px;
+}
+.single-product .cart .minus:hover, .single-product .cart .plus:hover, .product-quantity .minus:hover, .product-quantity .plus:hover {
+	border-color: #000;
+}
+.single_add_to_cart_button:hover {
+	background-color: #333;
+}
+
+.single-product .module div.copy p, .single-product .module h3, .single-product .product_meta, .single-product .module {
+	font-size: 13px;
+	line-height: 20px;
+	font-weight: 700;
+}
+.single-product .product_meta {
+	color: #878787;
+	margin-top: 40px;
+}
+.single-product .product_meta a {
+	color: #262626;
+}
+.single-product .product_meta > span {
+	display: block;
+}
+.product-content .text-module { width: 100%; padding-right: 11%; padding-left: 11%; box-sizing: border-box; }
+/*.form-module.stick-it {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  padding: 5%;
+}*/
+
+/* Single product mobile structure */
+
+@media all and (max-width: 960px) {
+
+	.single-product .related.products,
+	.single-product .upsells.products { display: none; }
+	.single-product #content-wrapper .module { height: auto !important; }
+	.single-product #content-wrapper .product-content .module { padding: 25px 0 40px; }
+
+}
+
+/* Rating stars */
+
+.star-rating {
+	display: inline-block;
+	position: relative;
+	top: 12px;
+	margin-left: 12px;
+	position: absolute;
+}
+.star-rating b {
+   display: block;
+   float: left;
+   width: 22px;
+}
+.star-rating b:before {
+   content: "\f005";
+   font-family: 'FontAwesome';
+   font-size: 17px;
+   line-height: 17px;
+   color: #E9EDEF;
+}
+
+/* Cart with variations */
+
+.single-product .cart.variations_form {
+	position: relative;
+	width: 100%;
+	top: 0;
+	left: 0;
+	right: auto;
+}
+.single-product .cart.variations_form .single_variation_wrap {
+	top: -60px;
+}
+.single-product .cart.variations_form table {
+	margin-top: 25px;
+	margin-bottom: -15px;
+	width: 95%;
+}
+.single-product .single_variation {
+	top: -60px;
+	position: absolute;
+	width: 100%;
+}
+table.variations td.label { padding: 10px 15px 8px; }
+table.variations .reset_variations { 
+	display: inline-block; 
+	margin-top: 5px; 
+}
+table.variations .reset_variations[style="visibility: hidden;"] {
+	display: none;
+}
+
+/* Custom reviews form */
+
+.woocommerce-page .modal-backdrop.in { opacity: 0; }
+
+#lobo-reviews, #lobo-reviews > div {
+	width: 100%;
+	height: 100%;
+}
+#lobo-reviews > div {
+	display: table;
+}
+#lobo-reviews > div > div {
+	display: table-cell;
+	vertical-align: middle;
+}
+#lobo-reviews > div > div > div {
+  background: #fff;
+  box-shadow: 5px 5px 12px rgba(0,0,0,.13);
+  min-height: 540px;
+  border: 1px solid #d6d6d6;
+  max-width: 600px;
+  position: absolute;
+  top: 25%;
+  left: 3%;
+  right: 3%;
+  margin: 0 auto;
+  padding: 0%;
+  box-sizing: border-box;
+}
+#lobo-reviews h5 {
+	width: 100%;
+	height: 42px;
+	text-align: center;
+	font-size: 13px;
+	line-height: 42px;
+	font-weight: 700;
+	color: #000;
+	color: rgba(0,0,0,.4);
+	text-transform: uppercase;
+	margin: 0;
+}
+#lobo-reviews .comment_container {
+	padding: 85px 105px;
+}
+#lobo-reviews .rating-meta {
+	width: 128px;
+	float: left;
+}
+#lobo-reviews strong {
+	font-size: 14px;
+	line-height: 14px;
+	display: block;
+	margin: 10px 0 5px;
+}
+#lobo-reviews time {
+	display: block;
+	font-weight: 700;
+	font-size: 13px;
+	line-height: 13px;
+	color: #bbb;
+}
+#lobo-reviews .rating-content {
+	float: left;
+	margin: -15px 0 0 20px;
+	width: 240px;
+	font-size: 13px;
+	line-height: 20px;
+	color: #333;
+	font-weight: 600;
+}
+
+.reviews-slider {
+	height: 500px;
+}
+.reviews-slider.rsDefault .rsArrow {
+	height: 50px;
+	opacity: 1 !important;
+	top: 50%;
+	visibility: visible !important;
+	width: 40px;
+	margin-top: -20px;
+}
+.reviews-slider.rsDefault .rsArrowLeft {
+	left: 20px;
+}
+.reviews-slider.rsDefault .rsArrowRight {
+	right: 30px;
+}
+.reviews-slider .rsArrowIcn {
+	background: none !important;
+	width: 27px;
+	height: 13px;
+	display: block;
+	top: 10px;
+	left: 10px;
+	visibility: visible !important;
+	opacity: 1 !important;
+	margin: 0;
+}
+.reviews-slider .rsArrowIcn:before {
+	content: "←";
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 23px;
+	line-height: 23px;
+	color: #000;
+	display: block;
+}
+.reviews-slider .rsArrowRight .rsArrowIcn:before {
+	content: "→";
+}
+.reviews-slider .rsOverflow {
+	cursor: default;
+}
+
+#lobo-reviews .form {
+	background: #ebebeb;
+	position: relative;
+}
+#lobo-reviews .form .comment-reply-title {
+	display: none;
+}
+#lobo-reviews .form label {
+	display: none;
+}
+#lobo-reviews .form .comment-form-author, #lobo-reviews .form .comment-form-email, #lobo-reviews .form .comment-form-rating {
+	width: 33.2%;
+	float: left;
+	display: block;
+	margin: 0;
+	height: 42px;
+	border-top: 1px solid #d6d6d6;
+	border-left: 1px solid #d6d6d6;
+	border-bottom: 1px solid #d6d6d6;
+	position: relative;
+}
+#lobo-reviews .form .comment-form-author {
+	border-left: none;
+}
+#lobo-reviews .form .comment-form-comment {
+	margin: 0;
+}
+.logged-in #lobo-reviews .form p.comment-form-rating, .logged-in #lobo-reviews .form #rating, .logged-in #lobo-reviews span.customSelect, .logged-in #lobo-reviews span.customSelectInner {
+	width: 600px !important;
+}
+#lobo-reviews .form-submit {
+	position: absolute;
+	bottom: 34px;
+	left: 495px;
+}
+#lobo-reviews .form-submit input#submit {
+	background: transparent;
+	color: #fff;
+	height: 42px;
+	width: 95px;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0;
+	z-index: 99999;
+	opacity: 1;
+	border: 5px solid #d6d6d6;
+	border-radius: 0;
+	color: #878787;
+	font-weight: 700;
+	text-transform: uppercase;
+	line-height: 24px;
+	letter-spacing: 0;
+	padding: 5px 20px 10px;
+}
+#lobo-reviews .form-submit input#submit:hover {
+	background: #878787;
+	color: #fff;
+	border-color: #878787;
+}
+#lobo-reviews .form input[type="text"], #lobo-reviews span.customSelect {
+	border: none;
+	background: transparent;
+	outline: none !important;
+	font-size: 13px;
+	line-height: 42px;
+	color: #878787;
+	font-weight: 700;
+	padding: 0 15px;
+	text-transform: uppercase;
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#lobo-reviews .form select  {
+	width:  201px !important;
+	cursor: pointer;
+}
+#lobo-reviews span.customSelect {
+	cursor: pointer;
+}
+#lobo-reviews span.customSelect:after {
+	font-family: 'FontAwesome';
+	content: "\f078";
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 15px;
+	color: #999;
+	font-size: 12px;
+}
+#lobo-reviews .form textarea {
+	background: transparent;
+	resize: none;
+	width: 95%;
+	height: 110px;
+	padding: 10px 15px;
+	border: none;
+	font-size: 13px;
+	line-height: 20px;
+	color: #C6C6C6;
+	font-weight: 800;
+}
+#lobo-reviews .form .stars {
+	display: none;
+}
+#lobo-reviews .form #rating {
+	display: block !important;
+}
+
+.rating-word {
+	position: absolute;
+  bottom: 5px;
+  width: 25%;
+  font-size: 90px;
+  line-height: 75px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+  letter-spacing: -5px;
+  text-align: right;
+  right: 5%;
+  top: 5%;
+  z-index: -1;
+  word-break: break-all;
+}
+/*.rating-word:before {
+	content: "#";
+}*/
+
+/* Related products */
+
+.related.products, .upsells.products, .cross-sells { float: left; width: 100%; }
+.related.products > h2, .upsells.products > h2, .cross-sells > h2 {
+	background: #E2E4E6;
+	font-size: 13px !important;
+	line-height: 70px !important;
+	color: #000;
+	font-weight: 700 !important;
+  letter-spacing: 1px;
+	width: 100%;
+	height: 70px;
+	text-align: center;
+	text-transform: uppercase;
+}
+.related.products li.product, .upsells.products li.product, .cross-sells li.product { float: left; }
+.related.products li.product .item-title, .upsells.products li.product .item-title, .cross-sells li.product .item-title { padding-top: 20px; }
+.related.products li.product .item-cat, .upsells.products li.product .item-cat, .cross-sells li.product .item-cat { margin: 5px 0 25px; }
+.related.products li.product .price, .upsells.products li.product .price, .cross-sells li.product .price { font-size: 27px; }
+.related.products li.product .button, .upsells.products li.product .button, .cross-sells li.product .button { padding: 0 15px; }
+.related.products li.product .item-title, .upsells.products li.product .item-title, .cross-sells li.product .item-title { padding-top: 10px !important; font-size: 15px !important; line-height: 20px !important; }
+.related.products li.product .item-cat, .upsells.products li.product .item-cat, .cross-sells li.product .item-cat { font-size: 15px; line-height: 13px; }
+.related.products li.product .price del, .upsells.products li.product .price del, .cross-sells li.product .price del { top: -10px; }
+
+/* WooCommerce messages */
+
+.woocommerce-message, .woocommerce-error, .woocommerce-info {
+	width: 100%;
+	font-size: 15px;
+	line-height: 25px;
+	color: #fff;
+	text-align: center;
+	padding: 25px 0;
+	background: #69FAC2;
+	font-weight: 700;
+	position: relative;
+	z-index: 102;
+	margin: 0;
+  box-sizing: border-box;
+}
+.woocommerce-error { background: #EE1B78; }
+.woocommerce-message .button {
+	font-weight: 700;
+	text-transform: uppercase;
+	height: 40px;
+	display: inline-block;
+	color: #333;
+	text-align: center;
+	line-height: 40px;
+	padding: 0 17px;
+	font-size: 11px;
+	margin-left: 30px;
+}
+.woocommerce-message .button:hover {
+	background: #333;
+}
+form .woocommerce-error {
+	margin-bottom: 40px;
+	background: transparent;
+	color: #ff0054;
+	font-size: 15px;
+	line-height: 15px;
+	border: 2px dashed #ff0054;
+	padding: 60px;
+	width: auto;
+	margin-top: 1px;
+}
+form .woocommerce-error li {
+	margin: 7px 0;
+}
+.demo_store{
+  position: absolute;
+  text-align: center;
+  background: #fff85f;
+  width: 100%;
+  height: 45px;
+  font-size: 11px;
+  line-height: 45px;
+}
+
+/* WooCommerce Filters */
+
+.woocommerce .blog-actions {
+	left: 0;
+	bottom: auto;
+	top: 0;
+	height: 100%;
+	width: 100%;
+}
+.woocommerce .blog-actions > div {
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+.woocommerce .blog-actions > div > div {
+	display: table-cell;
+	vertical-align: middle;
+	padding-top: 40px;
+}
+.woocommerce .blog-categories, .woocommerce .blog-action-search {
+	max-width: 800px;
+	margin: auto;
+}
+.blog-actions .woocommerce.widget {
+	float: left;
+	width: 180px;
+	margin: 0 10px;
+	position: relative;
+}
+.blog-actions .woocommerce.widget .widget-title {
+	font-size: 14px;
+	line-height: 23px;
+	font-weight: 600;
+	color: #fff;
+	width: 100%;
+	border-bottom: 1px solid #fff;
+}
+.blog-actions .woocommerce.widget .widget-title.expand {
+	cursor: pointer;
+}
+.blog-actions .woocommerce.widget .widget-title.expand:after {
+	font-family: 'FontAwesome';
+	content: "\f0d7";
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 1px;
+	font-size: 14px;
+}
+.blog-actions .woocommerce.widget a, .blog-actions .woocommerce.widget li a {
+	font-size: 12px;
+	line-height: 12px;
+	color: #fff;
+	font-weight: 700;
+}
+.blog-actions .woocommerce.widget li a {
+	color: #000;
+}
+.blog-actions .woocommerce.widget a:hover, .blog-actions .woocommerce.widget li a:hover {
+	color: #666;
+}
+.blog-actions .woocommerce.widget > ul {
+	padding: 10px;
+	margin-top: -1px;
+	position: absolute;
+	width: 160px;
+	top: 24px;
+}
+.blog-actions .woocommerce.widget li {
+	margin-bottom: 5px;
+}
+.blog-actions .woocommerce.widget ul li ul {
+	margin: 5px 0 0 15px;
+}
+.blog-actions .woocommerce.widget .count {
+	font-size: 10px;
+	font-weight: 700;
+	color: #000;
+	display: none;
+}
+.blog-actions .woocommerce.widget .count:before {
+	content: "(";
+}
+.blog-actions .woocommerce.widget .count:after {
+	content: ")";
+}
+
+.ui-slider.ui-state-disabled .ui-slider-handle,
+.ui-slider.ui-state-disabled .ui-slider-range {
+   filter: inherit;
+}
+.ui-slider-horizontal {
+   height: 5px;
+   background: #dcdcdc;
+   position: relative;
+}
+.ui-slider-horizontal .ui-slider-handle {
+   top: -3px;
+   margin-left: -3px;
+   width: 11px;
+   height: 11px;
+   border-radius: 6px;
+   border: 3px solid #3B3B3B;
+   background: #f7f7f7;
+   cursor: pointer;
+   position: absolute;
+   z-index: 1;
+}
+.ui-slider-horizontal .ui-slider-handle:hover {
+   border-color: #e54939;
+}
+.ui-slider-horizontal .ui-slider-range {
+   top: 0;
+   height: 5px;
+   background: #afafaf;
+   position: absolute;
+   z-index: 0;
+}
+.ui-slider-horizontal .ui-slider-range-min {
+   left: 0;
+}
+.ui-slider-horizontal .ui-slider-range-max {
+   right: 0;
+}
+
+.price_slider_wrapper {
+	position: relative;
+	width: 70%;
+	margin-left: 10px;
+	margin-top: 13px;
+}
+.price_slider_wrapper a {
+	padding: 0 !important;
+	margin: 0 !important;
+	background: #fff !important;
+	border: none !important;
+	opacity: 1 !important;
+}
+.price_slider_wrapper a:hover {
+	background: #ddd !important;
+}
+
+.price_slider_amount .button {
+	margin: 35px -7px 0 0;
+	float: right;
+	background: none repeat scroll 0 0 transparent !important;
+	border: none !important;
+	color: #fff;
+	font-size: 15px;
+	font-weight: 700;
+	line-height: 15px;
+	padding: 0 !important;
+	text-transform: uppercase;
+}
+.price_label {
+	font-size: 12px;
+	line-height: 12px;
+	color: #959595;
+	font-weight: 700;
+	padding-top: 35px;
+	text-transform: uppercase;
+}
+
+/* Cart */
+
+#main-cart-holder {
+	position: absolute;
+	right: 5%;
+	top: 40px;
+	margin-right: 60px;
+	z-index: 99997;
+}
+#main-cart-holder.stick-it {
+	position: fixed;
+	top: 20px;
+	right: -30px;
+}
+#main-cart-holder.stick-it #main-cart-divider {
+	right: 49px;
+}
+#main-cart {
+	position: relative;
+	width: 40px;
+	height: 40px;
+	background: url(../index_files/img/cart.png) no-repeat -6px 7px transparent;
+	z-index: 99;
+}
+#main-cart-divider {
+	text-indent: -9999px;
+	display: block;
+	position: absolute;
+	top: 8px;
+	right: -14px;
+	width: 2px;
+	height: 25px;
+	background: url(../index_files/img/cart.png) no-repeat 0 -1px;
+	z-index: 99;
+}
+.no-cmpt.is-active-wc #main-cart-divider { right: 45px; }
+.no-cmpt.is-active-wc #main-cart-holder { right: 0; top: 44px; }
+.no-cmpt.is-active-wc #main-cart-holder.stick-it { top: 21px; }
+.no-cmpt.is-active-wc .actions { right: 115px; }
+.is-active-wc .actions { right: 95px; }
+.no-sticky-head.is-active-wc #main-cart-holder.stick-it #main-cart-divider { display: none; }
+.no-cmpt.is-active-wc #header .main-d-nav { padding-right: 115px; }
+.no-cmpt.is-active-wc #header .main-d-nav ul .sub-menu { right: -7%; }
+.top-light #main-cart { background-position: -41px 7px; }
+.is-active-wc.enabled-sticky-shadow #main-cart-holder.stick-it #main-cart { background-position: -6px 7px; }
+.is-active-wc.enabled-sticky-shadow #main-cart-holder.stick-it #main-cart-divider { background-position: 0 -1px; }
+.top-light #main-cart-divider { background-position: -90px -1px; }
+.compact-menu-open #main-cart-holder { opacity: 0; }
+
+#main-cart .cart-contents {
+	width: 40px;
+	height: 50px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#main-cart .cart-contents span {
+   width: 18px;
+   height: 18px;
+   border-radius: 9px;
+   font-size: 10px;
+   line-height: 19px;
+   color: #000;
+   font-weight: 700;
+   text-align: center;
+   position: absolute;
+   top: 21px;
+   right: 3px;
+}
+#main-cart .widget_shopping_cart {
+	position: absolute;
+	width: 250px;
+	right: -10px;
+	top: 50px;
+	z-index: 9999;
+	display: none;
+}
+#main-cart .widget_shopping_cart {
+	padding-top: 6px;
+}
+#main-cart .widget_shopping_cart > div {
+	background: #fafafa;
+}
+.no-js #main-cart:hover .widget_shopping_cart {
+	display: block;
+}
+#main-cart .cart-title {
+	height: 60px;
+	margin: 0;
+	background: #000;
+	color: #fff;
+	font-size: 12px;
+	line-height: 60px;
+	text-transform: uppercase;
+	text-align: center;
+	position: relative;
+}
+#main-cart .cart-title:after { 
+	bottom: 100%; 
+	left: 100%; 
+	border: solid transparent; 
+	content: " "; 
+	height: 0; 
+	width: 0; 
+	position: absolute; 
+	pointer-events: none; 
+	border-color: rgba(0, 0, 0, 0); 
+	border-bottom-color: #000000;
+	border-width: 6px; 
+	margin-left: -36px; 
+	z-index: 999;
+}
+#main-cart .widget_shopping_cart .widgettitle {
+	display: none;
+}
+#main-cart .widget_shopping_cart .product_list_widget {
+	padding: 9px;
+}
+#main-cart .widget_shopping_cart li {
+	width: 100%;
+	float: none;
+	min-height: 77px;
+	margin-bottom: 23px;
+}
+#main-cart .widget_shopping_cart .product_list_widget li a {
+	font-size: 12px;
+	line-height: 16px;
+	margin-bottom: 1px;
+	display: block;
+	padding-top: 5px;
+	text-transform: uppercase;
+}
+#main-cart .widget_shopping_cart .product_list_widget img {
+   height: 77px;
+   width: 77px;
+   vertical-align: top;
+   margin: -5px 20px 0 0;
+   float: left;
+}
+#main-cart .p-name, #main-cart .p-price, #main-cart .p-quantity {
+	display: inline-block;
+}
+#main-cart .p-name {
+	margin-bottom: 15px;
+}
+#main-cart .p-price, #main-cart .p-quantity  {
+	color: #cbcbcb;
+	font-weight: 400;
+}
+#main-cart .widget_shopping_cart .total {
+	text-transform: uppercase;
+	color: #cbcbcb;
+	font-weight: 700;
+	margin: 0px 20px 30px;
+	font-size: 14px;
+}
+#main-cart .widget_shopping_cart .total span {
+   float: right;
+   font-size: 18px;
+   font-weight: 800;
+   color: #000;
+   position: relative;
+   top: -2px;
+}
+#main-cart .widget_shopping_cart .buttons {
+	margin: 0;
+}
+#main-cart .widget_shopping_cart .button {
+	height: 60px;
+	width: 50%;
+	float: left;
+	text-align: center;
+	text-transform: uppercase;
+	line-height: 60px;
+	font-size: 12px;
+	font-weight: 700;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#main-cart .widget_shopping_cart .button.checkout {
+	background: #aeaeae;
+	color: #444;
+}
+#main-cart .widget_shopping_cart .button.view {
+	color: #000;
+}
+#main-cart .widget_shopping_cart .button:hover {
+	background: #333 !important;
+}
+
+#main-cart .cart_list  {
+   list-style: none;
+}
+#main-cart .cart_list:empty {
+	display: none !important;
+}
+
+/* Cart page & start of other pages */
+
+.woocommerce-page .post-wrapper {
+	padding: 60px 0;
+	background: url(../index_files/img/woc-bg.png) repeat 0 0 transparent;
+  background-attachment: fixed;
+}
+.woocommerce-page .post-body > h2 {
+	display: none;
+}
+.woocommerce-page .the-post {
+	padding: 0 5%;
+	max-width: 1400px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.woocommerce-page .the-post > article {
+	width: 100%;
+	margin: 0;
+}
+.wcp-title, .woocommerce-page .the-post h2 {
+	font-size: 33px;
+	line-height: 38px;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-align: center;
+}
+.wcp-subtitle {
+	font-size: 17px !important;
+	line-height: 24px !important;
+	font-weight: normal !important;
+	text-align: center;
+	margin-top: 15px;
+	color: #b9b9b9 !important;
+}
+.wcp-subtitle a {
+	border-bottom: 1px dotted #000;
+}
+
+.shop_table {
+	margin-top: 100px;
+}
+.shop_table, .shop_table tr, .shop_table td, .shop_table th {
+	border: none;
+	vertical-align: top;
+}
+.shop_table thead th {
+	font-size: 11px;
+	line-height: 17px;
+	font-weight: 800;
+	color: #B8B8B8;
+	text-transform: uppercase;
+}
+.shop_table tbody td {
+	padding: 0 14px 65px;
+}
+.shop_table .product-name img {
+	width: 77px;
+	height: auto;
+	float: left;
+	margin: 0px 30px 0 0;
+}
+.shop_table th.product-name {
+	padding-left: 121px;
+}
+.shop_table .product-name a, #order_review tbody .product-name, .order_details tbody .product-name {
+	font-size: 13px;
+	line-height: 17px;
+	font-weight: 700;
+	color: #000;
+	text-transform: uppercase;
+}
+.shop_table .product-name a { position: relative; }
+.shop_table .product-name .variation, .shop_table .product-name .variation p {
+	color: #000;
+	font-size: 11px;
+	line-height: 15px;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+.shop_table .amount {
+	font-weight: 700;
+	font-size: 17px;
+	line-height: 17px;
+}
+.shop_table .product-subtotal .amount {
+	font-weight: 800;
+}
+dt, dd, dd p {
+	display: inline;
+	width: auto;
+	margin: 0;
+}
+.product-quantity .quantity:before, .product-quantity .quantity:after, .product-quantity input {
+	height: 26px;
+}
+.product-quantity .quantity:before, .product-quantity .quantity:after {
+	font-size: 10px;
+	line-height: 28px;
+}
+.product-quantity .input-text {
+	font-size: 13px;
+	line-height: 13px;
+}
+td.product-quantity .quantity {
+	width: 140px;
+}
+td.product-quantity {
+	width: 200px;
+}
+
+.cart_totals table, #order_review table {
+	margin: 80px auto;
+}
+.cart_totals th, .cart_totals td, #order_review th, #order_review td, table.order_details th, table.order_details td {
+	font-size: 17px;
+	line-height: 16px;
+	font-weight: 700;
+	color: #B8B8B8;
+	width: 50%;
+}
+.cart_totals th, #order_review th, table.order_details th {
+	text-align: right;
+}
+.cart_totals td, #order_review td, table.order_details td {
+	color: #858585;
+}
+.cart_totals .order-total th, #order_review .order-total th, table.order_details .order-total th {
+	color: #000;
+}
+.cart_totals .order-total td, #order_review .order-total td, table.order_details .order-total td {
+	color: #F1430E;
+}
+
+#order_review, table.order_details {
+	max-width: 500px;
+	margin: 80px auto 0;
+}
+#order_review thead th, table.order_details thead th {
+	text-align: left;
+	font-size: 11px;
+	line-height: 11px;
+	font-weight: 700;
+	color: #b8b8b8;
+	padding: 10px 14px 18px !important;
+}
+#order_review tbody td, table.order_details tbody td {
+	font-size: 17px;
+	color: #000;
+	padding-bottom: 40px;
+	position: relative;
+}
+#order_review .product-quantity, table.order_details .product-quantity {
+	position: absolute;
+	right: 0;
+	margin-right: 50px;
+}
+#order_review.custom_order .product-quantity {
+	position: static;
+	margin-right: 0;
+}
+#order_review.custom_order td.product-quantity {
+	font-size: 13px;
+}
+#order_review tfoot th, table.order_details tfoot th {
+	text-align: left;
+}
+#order_review td, table.order_details td {
+	width: 40%;
+}
+#order_review th, table.order_details th {
+	width: 60%;
+}
+#order_review .form-row.place-order, table.order_details .form-row.place-order {
+	margin-top: 50px;
+}
+table.order_details {
+	margin-top: 0;
+}
+
+.woocommerce-page .lobo-tabs {
+	text-align: center;
+}
+.woocommerce-page.woocommerce-cart .lobo-tabs {
+	margin-top: 80px;
+}
+.woocommerce .lobo-tabs .contents { background: rgba(235, 235, 235, 0.75); }
+.lobo-tabs input, .lobo-tabs select, .lobo-tabs textarea {
+	background: #fff;
+	border: 1px solid #cfcfcf;
+	font-size: 12px;
+	height: 42px;
+	line-height: 42px;
+	font-weight: 500;
+	padding: 0 12px;
+	color: #8b8b8b;
+	display: block;
+	max-width: 580px;
+	width: 100%;
+	margin: 10px auto;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.woocommerce .lobo-tabs .contents table,
+.woocommerce .lobo-tabs .contents table tr { border: none; }
+.lobo-tabs select {
+	padding-top: 10px;
+}
+.lobo-tabs input[type="submit"], .lobo-tabs button, .wc-button {
+	font-size: 11px;
+	line-height: 61px;
+	font-weight: 800;
+	color: #000;
+	height: 61px;
+	padding: 0 60px;
+	text-transform: uppercase;
+	margin: 0 3px;
+	border: none;
+	outline: none !important;
+	display: inline;
+}
+.woocommerce-page input[type="submit"]:hover, .woocommerce-page button:hover, .wc-button:hover {
+	background: #333;
+}
+.lobo-tabs input[type="submit"], .lobo-tabs button {
+	width: auto;
+	margin-top: 20px;
+}
+.lobo-tabs #coupon_code {
+	margin-top: 60px;
+}
+a.wc-button {
+	display: inline-block;
+	color: #000;
+}
+
+.lobo-tabs input[type="checkbox"], .lobo-tabs input[type="radio"] {
+	display: inline-block;
+	width: auto;
+	height: auto;
+	position: relative;
+	top: 2px;
+}
+.lobo-tabs label + input[type="checkbox"], .lobo-tabs label + input[type="radio"] {
+	left: 10px;
+}
+.lobo-tabs input[type="checkbox"] + label, .lobo-tabs input[type="radio"] + label {
+	margin-left: 10px;
+}
+
+.shipping-calculator-form, .checkout_coupon {
+	display: block !important;
+	margin-top: 60px;
+}
+.cross-sells {
+	width: 100%;
+}
+
+.woocommerce-page .lobo-tabs h3 {
+	display: none;
+}
+.woocommerce-page .lobo-tabs h3.wcp-title, #ship-to-different-address {
+	display: block;
+}
+#ship-to-different-address {
+	text-align: left;
+}
+
+.lobo-tabs label {
+	font-size: 12px;
+	line-height: 12px;
+	color: #5F5F5F;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-align: left;
+}
+.p-form {
+	max-width: 580px;
+	margin: 30px auto 30px;
+}
+.p-form p {
+	text-align: left;
+	margin-bottom: 25px;
+}
+.p-form p.form-row {
+	line-height: 15px !important;
+}
+.p-form p.form-row.form-row-first {
+	float: left;
+}
+.p-form p.form-row.form-row-last {
+	float: right;
+}
+.p-form p.form-row.form-row-first, .p-form p.form-row.form-row-last {
+	width: 48%;
+}
+.p-form p.form-row.form-row-wide {
+	width: 100%;
+}
+
+.payment_methods li {
+	display: block;
+	margin-bottom: 20px;
+}
+.payment_methods li label {
+	color: #000;
+	text-transform: none;
+	font-size: 16px;
+	font-weight: 700;
+	border-bottom: 1px dotted #000;
+	padding-bottom: 0;
+	line-height: 16px;
+	cursor: pointer;
+}
+.payment_methods li input:checked + label {
+	border-bottom-style: solid;
+}
+.payment_methods img, .payment_methods li input[type="radio"] {
+	display: none;
+}
+.payment_methods p {
+	max-width: 500px;
+	margin: 20px auto 0;
+}
+
+/* WooCommerce custom "header" */
+
+.woo-cheader {
+	position: relative;
+	width: 100%;
+	z-index: 101;
+	background: #fff;
+	border-bottom: 1px solid #cecece;
+	text-align: center;
+	padding: 30px 0;
+}
+.woo-cheader a {
+  position: relative;
+	font-weight: 700;
+	font-size: 13px;
+	line-height: 13px;
+	text-transform: uppercase;
+	color: #000;
+	margin: 0 15px;
+}
+.woo-cheader .woocommerce-breadcrumb {
+	position: absolute;
+	top: 33px;
+	left: 3%;
+	font-size: 11px;
+	line-height: 11px;
+	font-weight: 500;
+	color: #b8b8b8;
+}
+.woo-cheader .woocommerce-breadcrumb a {
+	margin: 0;
+	font-weight: 500px;
+	font-size: 11px;
+	line-height: 11px;
+}
+.woo-cheader .woocommerce-breadcrumb a:hover { color: #000; }
+.woo-cheader .woocommerce-breadcrumb span {
+	font-size: 0;
+}
+.woo-cheader .woocommerce-breadcrumb span:after {
+	font-size: 11px;
+	content: "/";
+}
+
+/* Checkout page */
+
+/* This is general text that appears inside tabs */
+.lobo-tabs p {
+	font-size: 13px;
+	line-height: 19px;
+	font-weight: 700;
+	color: #b8b8b8;
+}
+/* This is general text that appears outside tabs */
+.woocommerce-page .post-excerpt p {
+	font-size: 15px;
+  font-weight: normal;
+	line-height: 25px;
+}
+
+/* Other stuff */
+.woocommerce-page .post-excerpt h2 {
+	margin: 50px 0 0 0;
+}
+.woocommerce-page .post-excerpt .wcp-title {
+	margin: 0;
+}
+.showlogin,
+.woocommerce-error a { border-bottom: 1px dotted #FFF; padding-bottom: 1px; }
+body input[name="update_cart"] { width: 265px !important; }
+body label[for="rememberme"] {
+  position: absolute;
+  margin: 0 auto;
+  left: 1%;
+  right: 1%;
+  width: 100%;
+  text-align: center;
+  margin-top: -15px;
+  margin-left: -10px;
+}
+body #customer_login input[name="login"] { margin-bottom: 25px; }
+.woocommerce p.lost_password {font-size: 14px; border-bottom: 1px dotted #b8b8b8; padding-bottom: 1px; display: inline; }
+.woocommerce p.lost_password:hover { color: #000; }
+.woocommerce .addresses.col2-set div { float: none; padding: 0; }
+.woocommerce .addresses.col2-set div:first-child { margin-bottom: 35px; }
+.woocommerce .wcp-subtitle a:hover { color: #000; }
+
+/* Continue */
+ul.order_details {
+	text-transform: uppercase;
+	font-size: 12px;
+	line-height: 18px;
+	font-weight: 700;
+}
+ul.order_details strong {
+	text-transform: none;
+	font-size: 14px;
+	font-weight: 400;
+}
+ul.order_details li {
+	margin-bottom: 5px;
+}
+
+.col2-set {
+	max-width: 600px;
+	margin: auto;
+}
+.col2-set .col-1 {
+	float: left;
+	padding-right: 2%;
+}
+.col2-set .col-2 {
+	float: right;
+	padding-left: 2%;
+}
+
+dl {
+	max-width: 600px;
+	margin: 20px auto;
+}
+dt {
+	float: left;
+	clear: left;
+}
+dd {
+	float: left;
+	font-weight: 700;
+}
+dl:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.variation {
+	margin: auto;
+}
+.variation dd, .variation dt {
+	float: none;
+	font-weight: 400;
+}
+
+p.wcp-subtitle {
+	position: relative;
+  width: 60%;
+  margin: 0;
+  padding: 0;
+  margin: 15px auto 0 auto;
+}
+
+address {
+	font-style: normal;
+	margin-top: 25px;
+}
+.order-actions a, .address a {
+	font-size: 17px;
+	line-height: 24px;
+	font-weight: 700;
+	font-weight: 700;
+	border-bottom: 1px dotted #000;
+	margin: 0 10px;
+}
+.p-form.register > p.form-row:last-of-type, .woocommerce > .login .p-form div.clear + p.form-row, p.lost_password {
+	text-align: center;
+}
+.at-top {
+	padding: 30px 0 !important;
+	margin-bottom: 50px;
+}
+.lobo-tabs.at-top-2 {
+	margin-top: 0 !important;
+}
+.at-top-2 .contents {
+	padding: 60px 0 30px !important;
+}
+.at-top-2 .contents .wc-button {
+	margin-top: 20px;
+}
+.custom-idea {
+	font-size: 17px;
+	line-height: 24px;
+	font-weight: 700;
+	text-align: center;
+	padding: 0 150px 30px;
+}
+
+/* New search filters */
+
+#shop-search {
+	position: static;
+	top: 79px;
+	left: 0;
+	background: url(../index_files/img/woc-bgd.png) repeat 0 0 transparent;
+	z-index: 99999;
+	width: 100%;
+	display: none;
+}
+#shop-search > div {
+	padding: 180px 8%;
+	height: 100%;
+}
+#shop-search #searchform {
+	float: left;
+	width: 45%;
+  margin-top: 25px;
+}
+#shop-search .wsf-title {
+	font-size: 17px;
+	line-height: 17px;
+	font-weight: 800;
+	color: #fff;
+	text-transform: uppercase;
+	margin-bottom: 5px;
+}
+#shop-search .wsf-search {
+	font-size: 50px;
+	line-height: 50px;
+	font-weight: 800;
+	color: #fff;
+	width: 100%;
+	opacity: .5;
+	text-transform: uppercase;
+	padding: 0;
+}
+#shop-search .wsf-help {
+	font-size: 13px;
+	line-height: 15px;
+	font-weight: 400;
+	text-transform: lowercase;
+	color: #fff;
+	margin-top: -10px;
+	padding: 0 !important;
+	background: transparent !important;
+  letter-spacing: 0.5px;
+}
+
+#shop-search .right {
+	width: 45%;
+	float: right;
+  margin-top: 15px;
+}
+#shop-search li, #shop-search ul {
+	float: left;
+	margin: 0;
+	display: inline;
+}
+#shop-search .contents > ul, #shop-search .contents > div {
+	margin: -10px 0 0 -10px;
+}
+#shop-search a:not(.ui-slider-handle) {
+  position: relative;
+	font-size: 23px !important;
+	line-height: 38px !important;
+	color: #fff;
+	opacity: .4;
+	font-weight: 400;
+	margin: 10px;
+}
+#shop-search a:hover { opacity: 1; }
+#shop-search .titles, #shop-search .titles ul { height: 40px; overflow: hidden; }
+#shop-search .titles .wsf-heading {
+	color: #fff;
+	font-size: 21px;
+	line-height: 21px;
+	font-weight: 700;
+	display: inline-block;
+	margin-bottom: 25px;
+	padding-bottom: 5px;
+	cursor: pointer;
+}
+#shop-search .titles li { margin-left: 25px; }
+#shop-search .titles li:first-child { margin-left: 0; }
+#shop-search .wsf-heading:hover, #shop-search li.opened .wsf-heading { border-bottom: 4px solid #fff; }
+#shop-search .contents { margin-top: 45px; }
+#shop-search .contents > div { display: none; }
+#shop-search .contents > div:first-child { display: block; }
+#shop-search .contents .count {
+	color: #fff;
+	font-size: 14px;
+	font-weight: 700;
+	opacity: .5;
+	margin-left: -5px;
+}
+#shop-search .contents .count:before { content: "("; }
+#shop-search .contents .count:after { content: ")"; }
+#shop-search .product_list_widget img,
+#shop-search .product_list_widget .amount,
+#shop-search .widget_shopping_cart_content .cart-title,
+#shop-search .cart_list .p-price,
+#shop-search .cart_list .p-quantity,
+#shop-search .total,
+#shop-search .button.view,
+#shop-search .button.checkout,
+#shop-search .product_list_widget .star-rating { display: none; }
+#shop-search .buttons { margin: 0; }
+body #shop-search .ss-cls-btn {
+  position: absolute;
+  top: 1%;
+  right: 3%;
+  font-size: 45px !important;
+  color: #FFF;
+  -webkit-transform: rotate(45deg);
+}
+body #shop-search .ss-cls-btn:after { height: 0; }
+
+/*WooCommerce shop pagination*/
+.woocommerce-pagination { background-color: #F5F5F5; box-sizing: border-box; }
+.woocommerce-pagination .page-numbers { position: relative; width: 100%; margin: 0 auto; text-align: center; }
+.woocommerce-pagination .page-numbers a {
+  -webkit-transition: background-color 0.2s ease-out;
+     -moz-transition: background-color 0.2s ease-out;
+      -ms-transition: background-color 0.2s ease-out;
+       -o-transition: background-color 0.2s ease-out;
+          transition: background-color 0.2s ease-out;
+}
+.woocommerce-pagination .page-numbers li { position: relative; display: inline-block; padding: 20px; }
+.woocommerce-pagination .page-numbers .page-numbers { position: relative; display: block; padding: 35px 20px; }
+.woocommerce-pagination .page-numbers .current { background: #EBEBEB; }
+.woocommerce-pagination .prev { left: 0; right: initial; }
+
+/* Hero helper classes - for custom text elements */
+
+.text-hero-title {
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-size: 55px;
+}
+.text-hero-subtitle {
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+/* WooCommerce animations */
+
+.single_add_to_cart_button, .single-product .cart input, .product-quantity input, .module .lobo-accordion h3, .reviews-slider .rsArrowIcn:before, .module .lobo-accordion h3:after, .blog-actions .woocommerce.widget .widget-title.expand, .blog-actions .woocommerce.widget .widget-title.expand:after, #main-cart, .button, .lobo-tabs .titles li, .payment_methods li label, #shop-search a, #shop-search .wsf-heading {
+	-webkit-transition: all 200ms linear;
+	transition: all 200ms linear;
+}
+
+/* Accordion shortcode */
+
+.module .lobo-accordion .section {
+	border-bottom: 1px solid #c7c7c7;
+}
+.module .lobo-accordion .section:first-child {
+	border-top: 1px solid #c7c7c7;
+	margin-top: 35px;
+}
+.module .lobo-accordion h3 {
+	color: #878787;
+	padding: 10px 0 12px;
+	cursor: pointer;
+	position: relative;
+	margin: 0;
+	font-size: 13px;
+	font-weight: 700;
+	line-height: 20px;
+}
+.module .lobo-accordion h3:hover,
+.module .lobo-accordion h3:hover:after { color: #000; }
+.module .lobo-accordion h3:after {
+	content: "\f067";
+	font-family: 'FontAwesome';
+	position: absolute;
+	top: 10px;
+  right: 0;
+	font-size: 14px;
+	line-height: 14px;
+	font-weight: 400;
+	color: #ccc;
+	padding: 5px 1px 0 0;
+}
+.module .lobo-accordion .section.opened h3:after {
+	content: "\f068";
+}
+.module .lobo-accordion .content {
+	display: none;
+	padding-bottom: 5px;
+	margin: 0;
+}
+.module .lobo-accordion .content, .module .lobo-accordion .content p {
+	font-size: 13px;
+	line-height: 20px;
+	font-weight: 700;
+}
+.module .lobo-accordion .content h2 {
+	display: none;
+}
+.page-template-template-modular-php .module .lobo-accordion h3, .single-portfolio .module .lobo-accordion h3, .page-template-template-modular-php .module .lobo-accordion h3:after, .single-portfolio .module .lobo-accordion h3:after {
+	color: inherit;
+}
+.page-template-template-modular-php .module .lobo-accordion h2, .single-portfolio .module .lobo-accordion h2 {
+	display: inline-block;
+}
+/*Only for WooCommerce tables*/
+table.shop_attributes { margin: 0 0 10px 0; }
+
+/* Tabs shortcode */
+
+.lobo-tabs .titles {
+	text-align: center;
+	margin-bottom: 40px;
+}
+.lobo-tabs .titles li {
+	height: 52px;
+	font-size: 11px;
+	line-height: 52px;
+	font-weight: 800;
+	text-transform: uppercase;
+	background: transparent;
+	margin: 0 2px;
+	cursor: pointer;
+	padding: 0 30px;
+	display: inline-block;
+}
+.lobo-tabs .titles li:hover {
+	background: #f7f7f7;
+}
+.lobo-tabs .titles li.opened {
+	background: #E9EDEF;
+}
+.lobo-tabs .contents {
+	background: #EBEBEB;
+	padding: 150px 50px;
+	min-height: 200px;
+}
+.lobo-tabs .contents > div {
+	display: none;
+}
+.lobo-tabs .contents > div.opened {
+   display: block;
+}
+
+/* Table styling */
+
+table {
+   width: 100%;
+   border: 1px solid #e9e9e9;
+   text-align: left;
+}
+table thead h4 {
+   font-size: 10px;
+   line-height: 18px;
+   text-transform: uppercase;
+   margin-bottom: 0;
+}
+table tr {
+   border-top: 1px solid #e9e9e9;
+}
+table thead tr {
+   border-top: none;
+}
+table th, table td {
+   min-height: 41px;
+   padding: 10px 14px 8px;
+   border-right: 1px solid #e9e9e9;
+}
+
+sub, sup {
+   font-size: .7em;
+   line-height: .7em;
+}
+sub {
+   vertical-align: bottom;
+}
+sup {
+   vertical-align: top;
+}
+del {
+   color: #959595;
+}
+table p {
+	margin: 0;
+}
+
+/* Password protected */
+
+.pwdprt {
+	background: none repeat scroll 0 0 #fff;
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	padding-left: 15%;
+	z-index: 99;
+}
+.pwdprt > div {
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+.pwdprt > div > div {
+	display: table-cell;
+	vertical-align: middle;
+}
+.pwdprt .title, .pwdprt .subtitle {
+	font-size: 15px;
+	line-height: 15px;
+	font-weight: 700 !important;
+	color: #7d7d7d;
+	text-transform: uppercase;
+}
+.pwdprt .title {
+	margin-bottom: -5px !important;
+}
+.pwdprt .subtitle {
+	color: #BEBCBC;
+	margin-top: -15px !important;
+}
+.pwdprt input {
+	font-size: 75px;
+	line-height: 75px;
+	text-transform: uppercase;
+	color: #1F1717;
+	font-weight: 800 !important;
+	border: none;
+	padding: 0;
+	margin: 0;
+	background: transparent;
+	margin-left: -5px;
+}
+.pwdprt input::-webkit-input-placeholder { color: #1F1717; opacity: 1; }
+.pwdprt input::-moz-placeholder { color: #1F1717; opacity: 1; }
+.pwdprt input::-ms-input-placeholder { color: #1F1717; opacity: 1; }
+
+.is-w-pwd {
+	overflow: hidden !important;
+}
+.is-w-pwd .hero-module {
+	display: none;
+}
+
+/* Modal CSS */
+
+.fade{opacity:0;-webkit-transition:opacity .15s linear;-o-transition:opacity .15s linear;transition:opacity .15s linear}.fade.in{opacity:1}.collapse{display:none}.collapse.in{display:block}tr.collapse.in{display:table-row}tbody.collapse.in{display:table-row-group}.collapsing{position:relative;height:0;overflow:hidden;-webkit-transition:height .35s ease;-o-transition:height .35s ease;transition:height .35s ease}.modal-open{overflow:hidden}.modal{display:none;overflow:hidden;position:fixed;top:0;right:0;bottom:0;left:0;z-index:99999;-webkit-overflow-scrolling:touch;outline:0}.modal.fade .modal-dialog{-webkit-transform:translate3d(0, -25%, 0);transform:translate3d(0, -25%, 0);-webkit-transition:-webkit-transform 0.3s ease-out;-moz-transition:-moz-transform 0.3s ease-out;-o-transition:-o-transform 0.3s ease-out;transition:transform 0.3s ease-out}.modal.in .modal-dialog{-webkit-transform:translate3d(0, 0, 0);transform:translate3d(0, 0, 0)}.modal-open .modal{overflow-x:hidden;overflow-y:auto}.modal-dialog{position:relative;width:auto;margin:10px}.modal-content{position:relative;background-color:#fff;border:1px solid #999;border:1px solid rgba(0,0,0,0.2);border-radius:6px;-webkit-box-shadow:0 3px 9px rgba(0,0,0,0.5);box-shadow:0 3px 9px rgba(0,0,0,0.5);background-clip:padding-box;outline:0}.modal-backdrop{position:fixed;top:0;right:0;bottom:0;left:0;z-index:99998;background-color:#000}.modal-backdrop.fade{opacity:0;filter:alpha(opacity=0)}.modal-backdrop.in{opacity:.5;filter:alpha(opacity=50)}.modal-header{padding:15px;border-bottom:1px solid #e5e5e5;min-height:16.42857143px}.modal-header .close{margin-top:-2px}.modal-title{margin:0;line-height:1.42857143}.modal-body{position:relative;padding:15px}.modal-footer{padding:15px;text-align:right;border-top:1px solid #e5e5e5}.modal-footer .btn+.btn{margin-left:5px;margin-bottom:0}.modal-footer .btn-group .btn+.btn{margin-left:-1px}.modal-footer .btn-block+.btn-block{margin-left:0}.modal-scrollbar-measure{position:absolute;top:-9999px;width:50px;height:50px;overflow:scroll}@media (min-width:768px){.modal-dialog{width:600px;margin:30px auto}.modal-content{-webkit-box-shadow:0 5px 15px rgba(0,0,0,0.5);box-shadow:0 5px 15px rgba(0,0,0,0.5)}.modal-sm{width:300px}}@media (min-width:992px){.modal-lg{width:900px}}.clearfix:before,.clearfix:after,.modal-footer:before,.modal-footer:after{content:" ";display:table}.clearfix:after,.modal-footer:after{clear:both}.center-block{display:block;margin-left:auto;margin-right:auto}.pull-right{float:right !important}.pull-left{float:left !important}.hide{display:none !important}.show{display:block !important}.invisible{visibility:hidden}.text-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}.hidden{display:none !important;visibility:hidden !important}.affix{position:fixed;-webkit-transform:translate3d(0, 0, 0);transform:translate3d(0, 0, 0)}
+
+
+/* FANCYBOX - original */
+
+.fancybox-wrap {
+  @extend %extend_78;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 8020;
+  iframe {
+    @extend %extend_78;
+  }
+  object {
+    @extend %extend_78;
+  }
+}
+.fancybox-skin {
+  @extend %extend_78;
+  position: relative;
+  background: $color_alabaster_approx;
+  color: $color_tundora_approx;
+  //Instead of the line below you could use @includetext-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  text-shadow: none;
+  //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+  border-radius: 4px;
+  background: transparent;
+}
+.fancybox-outer {
+  @extend %extend_78;
+  position: relative;
+}
+.fancybox-inner {
+  @extend %extend_78;
+  position: relative;
+  overflow: hidden;
+}
+.fancybox-image {
+  @extend %extend_78;
+  @extend %extend_79;
+  max-width: 100%;
+  max-height: 100%;
+}
+.fancybox-nav {
+  @extend %extend_78;
+  position: absolute;
+  top: 0;
+  width: 40%;
+  height: 100%;
+  cursor: pointer;
+  text-decoration: none;
+  background: transparent $url_55;
+  z-index: 8040;
+  span {
+    @extend %extend_78;
+    position: absolute;
+    top: 50%;
+    width: 36px;
+    height: 34px;
+    margin-top: -18px;
+    cursor: pointer;
+    z-index: 8040;
+    visibility: hidden;
+    @extend %extend_80;
+  }
+  &:hover span {
+    visibility: visible;
+    filter: alpha(opacity=100);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.fancybox-tmp {
+  @extend %extend_78;
+  position: absolute;
+  top: -99999px;
+  left: -99999px;
+  visibility: hidden;
+  max-width: 99999px;
+  max-height: 99999px;
+  overflow: visible!important;
+}
+.fancybox-opened {
+  z-index: 8030;
+  z-index: 99999;
+  .fancybox-skin {
+    //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 10px 25px $black_50;
+    //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 0 13px $black_20;
+  }
+  .fancybox-title {
+    visibility: visible;
+  }
+}
+.fancybox-error {
+  color: $color_tundora_approx;
+  font: 14px/20px $font_26, $font_25, $font_24, $font_11;
+  white-space: nowrap;
+  margin: 0;
+  padding: 15px;
+}
+.fancybox-iframe {
+  @extend %extend_79;
+}
+#fancybox-loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -22px;
+  margin-left: -22px;
+  background-position: 0 -108px;
+  opacity: 0.8;
+  cursor: pointer;
+  z-index: 8060;
+  z-index: 99999;
+  div {
+    width: 44px;
+    height: 44px;
+    background: $url_17 no-repeat center center transparent;
+  }
+}
+.fancybox-close {
+  position: absolute;
+  top: -18px;
+  right: -18px;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  z-index: 8040;
+  background-position: -115px 0;
+  right: -25px;
+  top: -5px;
+  filter: alpha(opacity=100);
+  opacity: 1;
+  visibility: visible;
+  @extend %extend_80;
+}
+.fancybox-prev {
+  left: 0;
+  span {
+    left: 10px;
+    background-position: 0 -36px;
+    left: -25px;
+    //Instead of the line below you could use @includetransition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: left, right, 0.075s ease-out;
+    &:hover {
+      left: -35px;
+    }
+  }
+}
+.fancybox-next {
+  right: -25px;
+  span {
+    right: 10px;
+    background-position: 0 -72px;
+    background-position: -45px 0;
+    right: 0;
+    //Instead of the line below you could use @includetransition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: left, right, 0.075s ease-out;
+    &:hover {
+      right: -10px;
+    }
+  }
+}
+.fancybox-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  display: none;
+  z-index: 8010;
+  z-index: 99998;
+  background: $color_mine_shaft_approx;
+  background: $color_mine_shaft_95_approx;
+  overflow: hidden !important;
+}
+.fancybox-overlay-fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+.fancybox-lock {
+  overflow: hidden;
+  .fancybox-overlay {
+    overflow: auto;
+    overflow-y: scroll;
+  }
+}
+.fancybox-title {
+  visibility: hidden;
+  font: normal 13px/20px $font_26, $font_25, $font_24, $font_11;
+  position: relative;
+  //Instead of the line below you could use @includetext-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  text-shadow: none;
+  z-index: 8050;
+}
+.fancybox-title-float-wrap {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  margin-bottom: -35px;
+  z-index: 8050;
+  text-align: center;
+  .child {
+    display: inline-block;
+    margin-right: -100%;
+    background: $black_80;
+    //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+    border-radius: 15px;
+    //Instead of the line below you could use @includetext-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    text-shadow: 0 1px 2px $color_log_cabin_approx;
+    color: $white;
+    font-weight: 700;
+    line-height: 24px;
+    white-space: nowrap;
+    padding: 2px 20px;
+    background: transparent;
+  }
+}
+.fancybox-title-outside-wrap {
+  position: relative;
+  margin-top: 10px;
+  color: $white;
+}
+.fancybox-title-inside-wrap {
+  padding-top: 10px;
+}
+.fancybox-title-over-wrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: $white;
+  background: $black_80;
+  padding: 10px;
+}
+
+.clear {
+	clear: both;
+}
+
+
+
+/* MEDIAELEMENTJS - custom skin */
+
+.mejs-container {
+  /* MEDIAELEMENTJS - original */
+  background: $black;
+  font-family: $font_25, $font_24;
+  text-align: left;
+  vertical-align: top;
+  text-indent: 0;
+  overflow: hidden !important;
+  position: relative;
+  .mejs-controls {
+    position: absolute;
+    background: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+    background: $url_59;
+    background: $black_70;
+    background: linear-gradient($mine_shaft_70,$black_70);
+    width: 100%;
+    background: none !important;
+    height: 30px;
+    div {
+      list-style-type: none;
+      background-image: none;
+      display: block;
+      float: left;
+      margin: 0;
+      padding: 0;
+      width: 26px;
+      height: 26px;
+      font-size: 11px;
+      line-height: 11px;
+      background: 0;
+      font-family: $font_25, $font_24;
+      border: 0;
+      &.mejs-time.mejs-duration-container {
+        margin: 0;
+      }
+    }
+    .mejs-time {
+      color: $white;
+      display: block;
+      height: 17px;
+      width: auto;
+      padding: 8px 3px 0;
+      overflow: hidden;
+      text-align: center;
+      padding: auto 4px;
+      //Instead of the line below you could use @includebox-sizing($bs)
+      box-sizing: content-box;
+      display: none !important;
+      span {
+        font-size: 11px;
+        color: $white;
+        line-height: 12px;
+        display: block;
+        float: left;
+        margin: 1px 2px 0 0;
+        width: auto;
+      }
+    }
+  }
+  &.yes-resize {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  video {
+    position: relative;
+  }
+  embed {
+    position: relative;
+  }
+}
+.me-plugin {
+  position: absolute;
+}
+.mejs-embed {
+  @extend %extend_81;
+  body {
+    @extend %extend_81;
+  }
+}
+.mejs-container-fullscreen {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: 1000;
+  .mejs-mediaelement {
+    width: 100%;
+    height: 100%;
+  }
+  video {
+    width: 100%;
+    height: 100%;
+    @extend %extend_85;
+  }
+  embed {
+    @extend %extend_85;
+  }
+}
+.mejs-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.mejs-mediaelement {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.mejs-poster {
+  position: absolute;
+  top: 0;
+  left: 0;
+  img {
+    padding: 0;
+    border: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+.mejs-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  &:hover .mejs-overlay-button {
+    background-position: 0 -100px;
+    background-position: center 4px;
+  }
+}
+.mejs-overlay-play {
+  cursor: pointer;
+}
+.mejs-overlay-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  margin: -50px 0 0 -50px;
+  background: $url_58 no-repeat;
+  @extend %extend_84;
+}
+.no-svg {
+  .mejs-overlay-button {
+    background-image: $url_58;
+    @extend %extend_84;
+  }
+  .mejs-controls .mejs-button button {
+    background-image: $url_61;
+    @extend %extend_82;
+  }
+}
+.mejs-overlay-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  margin: -40px 0 0 -40px;
+  background: $color_mine_shaft_approx;
+  background: $url_59;
+  background: $black_90;
+  background: linear-gradient($mine_shaft_90,$black_90);
+  background: $color_rangoon_green_approx;
+  background: $color_rangoon_green_90_approx;
+  height: 60px;
+  margin: -30px 0 0 -30px;
+  width: 60px;
+  display: none;
+  span {
+    display: block;
+    width: 80px;
+    height: 80px;
+    background: transparent $url_60 50% 50% no-repeat;
+    background-image: $url_63;
+    height: 60px;
+    opacity: 0.9;
+    width: 60px;
+  }
+}
+.mejs-controls {
+  .mejs-button {
+    position: absolute;
+    bottom: 15px;
+    button {
+      cursor: pointer;
+      display: block;
+      font-size: 0;
+      line-height: 0;
+      text-decoration: none;
+      margin: 7px 5px;
+      padding: 0;
+      position: absolute;
+      height: 16px;
+      width: 16px;
+      border: 0;
+      background: transparent $url_61 no-repeat;
+      @extend %extend_82;
+      &:focus {
+        outline: solid 1px $yellow;
+        outline: none;
+      }
+    }
+    &.mejs-volume-button {
+      left: 30px;
+    }
+    &.mejs-fullscreen-button {
+      right: 10px;
+    }
+  }
+  div {
+    &.mejs-time-rail {
+      width: 200px;
+      padding-top: 5px;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      bottom: 0;
+      height: 5px;
+      position: absolute;
+    }
+    &.mejs-horizontal-volume-slider {
+      height: 26px;
+      width: 60px;
+      position: relative;
+    }
+  }
+  .mejs-time-rail {
+    span {
+      display: block;
+      position: absolute;
+      width: 180px;
+      height: 10px;
+      //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+      border-radius: 2px;
+      cursor: pointer;
+      height: 5px;
+      //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+      border-radius: 0;
+      padding: 0;
+      margin: 0 !important;
+    }
+    .mejs-time-total {
+      margin: 5px;
+      background: $color_mine_shaft_approx;
+      background: $mine_shaft_80;
+      background: linear-gradient($color_rangoon_green_80_approx,$color_masala_80_approx);
+      background: $color_chicago_approx;
+      background: $color_bunker_50_approx;
+      //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      box-shadow: none;
+    }
+    .mejs-time-buffering {
+      width: 100%;
+      background-image: linear-gradient(-45deg,$white_15 25%,transparent 25%,transparent 50%,$white_15 50%,$white_15 75%,transparent 75%,transparent);
+      background-size: 15px 15px;
+      animation: buffering-stripes 2s linear infinite;
+      background: $color_chicago_approx;
+      background: $color_bunker_50_approx;
+    }
+    .mejs-time-loaded {
+      background: $color_pelorous_approx;
+      background: $color_pelorous_80_approx;
+      background: linear-gradient($color_jelly_bean_80_approx,$color_shakespeare_80_approx);
+      width: 0;
+      background: $color_tapa_approx;
+    }
+    .mejs-time-current {
+      width: 0;
+      background: $white;
+      background: $white_80;
+      background: linear-gradient($white_90,$color_pumice_80_approx);
+      background: $color_eastern_blue_approx;
+    }
+    .mejs-time-handle {
+      display: none;
+      position: absolute;
+      margin: 0;
+      width: 10px;
+      background: $white;
+      //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+      border-radius: 5px;
+      cursor: pointer;
+      border: solid 2px $color_mine_shaft_approx;
+      top: -2px;
+      text-align: center;
+      @extend %extend_83;
+      display: none !important;
+    }
+    .mejs-time-float {
+      position: absolute;
+      display: none;
+      background: $color_gallery_approx;
+      width: 36px;
+      height: 17px;
+      border: solid 1px $color_mine_shaft_approx;
+      top: -26px;
+      margin-left: -18px;
+      text-align: center;
+      color: $color_woodsmoke_approx;
+      display: none !important;
+    }
+    .mejs-time-float-current {
+      margin: 2px;
+      width: 30px;
+      display: block;
+      text-align: center;
+      left: 0;
+    }
+    .mejs-time-float-corner {
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 0;
+      line-height: 0;
+      border: solid 5px $color_gallery_approx;
+      border-color: $color_gallery_approx transparent transparent transparent;
+      //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+      border-radius: 0;
+      top: 15px;
+      left: 13px;
+    }
+  }
+  .mejs-fullscreen-button {
+    button {
+      background-position: -32px 0;
+      background-position: -61px 0;
+    }
+    &.mejs-unfullscreen button {
+      background-position: -60px -30px;
+    }
+  }
+  .mejs-volume-button {
+    position: relative;
+    .mejs-volume-slider {
+      display: none;
+      height: 115px;
+      width: 25px;
+      background: $url_59;
+      background: $mine_shaft_70;
+      //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+      border-radius: 0;
+      top: -115px;
+      left: 0;
+      z-index: 1;
+      position: absolute;
+      margin: 0;
+      .mejs-volume-total {
+        position: absolute;
+        left: 11px;
+        top: 8px;
+        width: 2px;
+        height: 100px;
+        background: $color_alto_approx;
+        background: $white_50;
+        margin: 0;
+      }
+      .mejs-volume-current {
+        position: absolute;
+        left: 11px;
+        top: 8px;
+        width: 2px;
+        height: 100px;
+        background: $color_alto_approx;
+        background: $white_90;
+        margin: 0;
+      }
+      .mejs-volume-handle {
+        position: absolute;
+        left: 4px;
+        top: -3px;
+        width: 16px;
+        height: 6px;
+        background: $color_alto_approx;
+        background: $white_90;
+        cursor: N-resize;
+        //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+        border-radius: 1px;
+        margin: 0;
+      }
+    }
+    &:hover {
+      //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+      border-radius: 0 0 4px 4px;
+    }
+  }
+  .mejs-horizontal-volume-slider {
+    .mejs-horizontal-volume-total {
+      position: absolute;
+      left: 0;
+      top: 11px;
+      width: 50px;
+      height: 8px;
+      margin: 0;
+      padding: 0;
+      font-size: 1px;
+      //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+      border-radius: 2px;
+      background: $color_mine_shaft_approx;
+      background: $mine_shaft_80;
+      background: linear-gradient($color_rangoon_green_80_approx,$color_masala_80_approx);
+    }
+    .mejs-horizontal-volume-current {
+      position: absolute;
+      left: 0;
+      top: 11px;
+      width: 50px;
+      height: 8px;
+      margin: 0;
+      padding: 0;
+      font-size: 1px;
+      //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+      border-radius: 2px;
+      background: $white;
+      background: $white_80;
+      background: linear-gradient($white_90,$color_pumice_80_approx);
+    }
+    .mejs-horizontal-volume-handle {
+      display: none;
+      @extend %extend_83;
+    }
+  }
+  .mejs-captions-button {
+    position: relative;
+    button {
+      background-position: -48px 0;
+    }
+    .mejs-captions-selector {
+      visibility: hidden;
+      position: absolute;
+      bottom: 26px;
+      right: -10px;
+      width: 130px;
+      height: 100px;
+      background: $url_59;
+      background: $mine_shaft_70;
+      border: solid 1px transparent;
+      padding: 10px;
+      overflow: hidden;
+      //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+      border-radius: 0;
+      ul {
+        margin: 0;
+        padding: 0;
+        display: block;
+        list-style-type: none!important;
+        overflow: hidden;
+        li {
+          margin: 0 0 6px 0;
+          padding: 0;
+          list-style-type: none!important;
+          display: block;
+          color: $white;
+          overflow: hidden;
+          input {
+            clear: both;
+            float: left;
+            margin: 3px 3px 0 5px;
+          }
+          label {
+            width: 100px;
+            float: left;
+            padding: 4px 0 0;
+            line-height: 15px;
+            font-family: $font_9, $font_10;
+            font-size: 10px;
+          }
+        }
+      }
+    }
+    .mejs-captions-translations {
+      font-size: 10px;
+      margin: 0 0 5px 0;
+    }
+  }
+  .mejs-picturecontrols-button {
+    background-position: -96px 0;
+  }
+  .mejs-sourcechooser-button {
+    position: relative;
+    button {
+      background-position: -128px 0;
+    }
+    .mejs-sourcechooser-selector {
+      visibility: hidden;
+      position: absolute;
+      bottom: 26px;
+      right: -10px;
+      width: 130px;
+      height: 100px;
+      background: $url_59;
+      background: $mine_shaft_70;
+      border: solid 1px transparent;
+      padding: 10px;
+      overflow: hidden;
+      //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+      border-radius: 0;
+      ul {
+        margin: 0;
+        padding: 0;
+        display: block;
+        list-style-type: none!important;
+        overflow: hidden;
+        li {
+          margin: 0 0 6px 0;
+          padding: 0;
+          list-style-type: none!important;
+          display: block;
+          color: $white;
+          overflow: hidden;
+          input {
+            clear: both;
+            float: left;
+            margin: 3px 3px 0 5px;
+          }
+          label {
+            width: 100px;
+            float: left;
+            padding: 4px 0 0;
+            line-height: 15px;
+            font-family: $font_9, $font_10;
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+  .mejs-volume-slider {
+    display: none !important;
+  }
+  .mejs-play button {
+    background-position: 0 0;
+    background-position: -1px -29px;
+  }
+  .mejs-pause button {
+    background-position: 0 -16px;
+    background-position: 0 0;
+  }
+  .mejs-stop button {
+    background-position: -112px 0;
+  }
+  .mejs-unfullscreen button {
+    background-position: -32px -16px;
+  }
+  .mejs-mute button {
+    background-position: -16px -16px;
+    background-position: -31px 0;
+  }
+  .mejs-unmute button {
+    background-position: -16px 0;
+    background-position: -31px -30px;
+  }
+  .mejs-loop-off button {
+    background-position: -64px -16px;
+  }
+  .mejs-loop-on button {
+    background-position: -64px 0;
+  }
+  .mejs-backlight-off button {
+    background-position: -80px -16px;
+  }
+  .mejs-backlight-on button {
+    background-position: -80px 0;
+  }
+}
+
+.mejs-chapters {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10000px;
+  z-index: 1;
+  .mejs-chapter {
+    position: absolute;
+    float: left;
+    background: $color_log_cabin_approx;
+    background: $black_70;
+    background: linear-gradient($mine_shaft_70,$black_70);
+    filter: progid:dximagetransform.microsoft.gradient(gradienttype=0,startcolorstr=$mine_shaft,endcolorstr=$black);
+    overflow: hidden;
+    border: 0;
+    .mejs-chapter-block {
+      font-size: 11px;
+      color: $white;
+      padding: 5px;
+      display: block;
+      border-right: solid 1px $color_mine_shaft_approx;
+      border-bottom: solid 1px $color_mine_shaft_approx;
+      cursor: pointer;
+      &:hover {
+        background: $color_storm_dust_approx;
+        background: $color_storm_dust_70_approx;
+        background: linear-gradient($color_storm_dust_70_approx,$mine_shaft_60);
+        filter: progid:dximagetransform.microsoft.gradient(gradienttype=0,startcolorstr=$color_storm_dust_approx,endcolorstr=$mine_shaft);
+      }
+      .ch-title {
+        font-size: 12px;
+        font-weight: bold;
+        display: block;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        margin: 0 0 3px 0;
+        line-height: 12px;
+      }
+      .ch-timespan {
+        font-size: 12px;
+        line-height: 12px;
+        margin: 3px 0 4px;
+        display: block;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+    .mejs-chapter-block-last {
+      border-right: none;
+    }
+  }
+}
+.mejs-captions-layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  line-height: 22px;
+  font-size: 12px;
+  color: $white;
+  a {
+    color: $white;
+    text-decoration: underline;
+  }
+}
+.mejs-captions-layer[lang=ar] {
+  font-size: 20px;
+  font-weight: normal;
+}
+.mejs-captions-position {
+  position: absolute;
+  width: 100%;
+  bottom: 15px;
+  left: 0;
+}
+.mejs-captions-position-hover {
+  bottom: 45px;
+}
+.mejs-captions-text {
+  padding: 3px 5px;
+  background: $url_59;
+  background: $color_bunker_80_approx;
+}
+.mejs-clear {
+  clear: both;
+}
+.me-cannotplay {
+  a {
+    color: $white;
+    font-weight: bold;
+  }
+  span {
+    padding: 15px;
+    display: block;
+  }
+}
+.mejs-contextmenu {
+  position: absolute;
+  width: 150px;
+  padding: 10px;
+  //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+  border-radius: 4px;
+  top: 0;
+  left: 0;
+  background: $white;
+  border: solid 1px $color_mountain_mist_approx;
+  z-index: 1001;
+  .mejs-contextmenu-separator {
+    height: 1px;
+    font-size: 0;
+    margin: 5px 6px;
+    background: $color_mine_shaft_approx;
+  }
+  .mejs-contextmenu-item {
+    font-family: $font_25, $font_24;
+    font-size: 12px;
+    padding: 4px 6px;
+    cursor: pointer;
+    color: $color_mine_shaft_approx;
+    &:hover {
+      background: $color_jelly_bean_approx;
+      color: $white;
+    }
+  }
+}
+.mejs-postroll-layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $url_59;
+  background: $mine_shaft_70;
+  z-index: 1000;
+  overflow: hidden;
+}
+.mejs-postroll-layer-content {
+  width: 100%;
+  height: 100%;
+}
+.mejs-postroll-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: $url_59;
+  background: $mine_shaft_70;
+  color: $white;
+  padding: 4px;
+  z-index: 100;
+  cursor: pointer;
+}
+
+/* YTPlayer */
+.mb_YTVPlayer :focus {
+  outline: 0;
+}
+.mb_YTVPlayer{
+  display:block;
+  transform:translateZ(0);
+  transform-style: preserve-3d;
+  perspective: 1000;
+  backface-visibility: hidden;
+  transform:translate3d(0,0,0);
+  animation-timing-function: linear;
+
+}
+
+.mb_YTVPlayer.fullscreen{
+  display:block!important;
+  position: fixed!important;
+  width: 100%!important;
+  height: 100%!important;
+  top: 0!important;
+  left: 0!important;
+  margin: 0!important;
+  border: none !important;
+}
+
+.mb_YTVPlayer.fullscreen .mbYTP_wrapper{
+  opacity:1 !important;
+}
+
+.mb_YTVPlayer.fullscreen .mbYTP_wrapper:last-of-type { display: none; }
+
+.mbYTP_wrapper iframe{
+  max-width: 4000px !important;
+}
+
+.inline_YTPlayer{
+  margin-bottom: 20px;
+  vertical-align:top;
+  position:relative;
+  left:0;
+  overflow: hidden;
+  border-radius: 4px;
+  -moz-box-shadow: 0 0 5px rgba(0,0,0,.7);
+  -webkit-box-shadow: 0 0 5px rgba(0,0,0,.7);
+  box-shadow: 0 0 5px rgba(0,0,0,.7);
+  background: rgba(0,0,0,.5);
+}
+
+.inline_YTPlayer img{
+  border: none!important;
+  -moz-transform: none!important;
+  -webkit-transform: none!important;
+  -o-transform: none!important;
+  transform: none!important;
+  margin:0!important;
+  padding:0!important
+}
+
+/*CONTROL BAR*/
+.yt-movie { width: 100%; min-height: 100%; }
+.mobile #ytVideo { display: none; }
+.video-mobile-fallback { display: none; }
+.mobile .video-mobile-fallback { display: block; }
+.mb_YTVPBar .ytpicon{
+  font-size: 15px;
+  font-family: 'ytpregular';
+}
+
+.mb_YTVPBar .mb_YTVPUrl.ytpicon{ display: none; }
+
+
+.mb_YTVPBar{
+
+  transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -webkit-transition: opacity 1s;
+  -o-transition: opacity 1s;
+
+  display:block;
+  width:100%;
+  height:0;
+  padding:0;
+  background:#333;
+  position:fixed;
+  bottom:0;
+  left:0;
+  -moz-box-sizing:padding-box;
+  -webkit-box-sizing:border-box;
+  text-align:left;
+  z-index: 1000;
+  font: 14px/16px sans-serif;
+  color:white;
+  opacity:0;
+}
+
+.mb_YTVPBar.visible, .mb_YTVPBar:hover{
+  opacity:1;
+}
+
+
+.mb_YTVPBar .buttonBar{
+
+  transition: all 1s;
+  -moz-transition: all 1s;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+
+  background:transparent;
+  font:12px/14px Calibri;
+  position:absolute;
+  top:-40px;
+  left:0;
+  padding: 0;
+  width:100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.mb_YTVPBar:hover .buttonBar{
+  /*background: rgba(0,0,0,1);*/
+}
+.bottom-controls {
+  position: absolute !important;
+  width: 100%;
+  height: 50px;
+  bottom: 0;
+  background: -moz-linear-gradient(bottom, #000 0%, transparent 100%);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0%,#000), color-stop(100%,transparent));
+  background: -o-linear-gradient(bottom, #000 0%,transparent 100%);
+  background: -ms-linear-gradient(bottom, #000 0%,transparent 100%);
+  background: linear-gradient(bottom, #000 0%,transparent 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#26000000', endColorstr='#00ffffff',GradientType=0 );
+  opacity: 0;
+  z-index: 10;
+  -webkit-transition: opacity 0.5s cubic-bezier(0.230, 1.000, 0.320, 1.000); 
+     -moz-transition: opacity 0.5s cubic-bezier(0.230, 1.000, 0.320, 1.000); 
+       -o-transition: opacity 0.5s cubic-bezier(0.230, 1.000, 0.320, 1.000); 
+          transition: opacity 0.5s cubic-bezier(0.230, 1.000, 0.320, 1.000);
+}
+.module:hover .bottom-controls { opacity: 0.35; }
+
+.mb_YTVPBar span{
+  display:inline-block;
+  font:16px/20px Calibri, sans-serif;
+  position:relative;
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  left: 0;
+}
+.mb_YTVPBar span.mb_YTVPTime{ display: none; }
+
+.mb_YTVPBar span.mb_YTVPUrl,.mb_YTVPBar span.mb_OnlyYT {
+  position: absolute;
+  width: auto;
+  display:block;
+  top:6px;
+  right:10px;
+  cursor: pointer;
+}
+.mb_YTVPBar span.mb_OnlyYT {
+  left: auto !important;
+  right: 10px !important;
+  bottom: 0px !important;
+  top: auto;
+}
+.mb_YTVPBar span.mb_YTVPUrl img{
+  width: 60px;
+}
+
+.mb_YTVPBar span.mb_OnlyYT {
+  left:185px;
+  right: auto;
+}
+.mb_YTVPBar span.mb_OnlyYT img{
+  width: 25px;
+}
+
+.mb_YTVPBar span.mb_YTVPUrl a{
+  color:white;
+}
+
+.mb_YTVPPlaypause,.mb_YTVPlayer .mb_YTVPPlaypause img{
+  cursor:pointer;
+}
+
+.mb_YTVPMuteUnmute{
+  cursor:pointer;
+}
+
+/*PROGRESS BAR*/
+.mb_YTVPProgress{
+  height:5px;
+  width:100%;
+  background: rgba(19,19,19,0.5);
+  bottom:0;
+  left:0;
+}
+
+.mb_YTVPLoaded{
+  height:5px;
+  width:0;
+  background: rgba(255,253,208,0.9);
+  left:0;
+  opacity: .5;
+}
+
+.mb_YTVTime{
+  height:5px;
+  width:0;
+  background:#fff85f;
+  bottom:0;
+  left:0;
+  -moz-box-shadow:#666666 1px 1px 3px;
+  -webkit-box-shadow:#666666 1px 1px 3px;
+}
+
+#scriptie {
+   background: #f7f7f7;
+   display: table;
+   height: 100%;
+   left: 0;
+   position: fixed;
+   text-align: center;
+   top: 0;
+   width: 100%;
+   z-index: 99999;
+}
+#scriptie > div {
+   display: table-cell;
+   vertical-align: middle;
+}

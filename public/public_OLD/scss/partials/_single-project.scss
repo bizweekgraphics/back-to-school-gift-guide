@@ -1,0 +1,40 @@
+/* 3. Single Project
+----------------------------------------------------------------------------- */
+
+/*Pagination*/
+.pagination-module {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  .pgnt-overlay {
+    @extend %extend_17;
+  }
+  a {
+    @extend %extend_17;
+  }
+  > div {
+    display: table;
+    width: 100.5%;
+    height: 100%;
+    > a {
+      position: relative;
+      display: table-cell;
+      width: 100%;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      vertical-align: middle;
+      text-align: center;
+      color: $color_rangoon_green_approx;
+      padding: 0 5%;
+      //Instead of the line below you could use @includebox-sizing($bs)
+      box-sizing: border-box;
+    }
+  }
+  .btn-link:after {
+    bottom: 50%;
+  }
+}
+
+.no-touch .pagination-module a:hover { font-size: 0; }

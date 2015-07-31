@@ -1,0 +1,467 @@
+body {
+  margin: 0;
+  font-family: $font_12, $font_7, $font_8, $font_9, $font_10, $font_11;
+  background: $black;
+  overflow-y: scroll;
+  .text-module {
+    //Instead of the line below you could use @includebox-sizing($bs)
+    box-sizing: border-box;
+  }
+  .module {
+    .big-text {
+      font-size: 3.5em;
+      line-height: 1.3em;
+    }
+    .middle-text {
+      font-size: 1.3em;
+      line-height: 1.7em;
+    }
+    .copy-highlight {
+      font-family: $font_14, $font_15, $font_16;
+      font-style: italic;
+      color: $color_laser_lemon_approx;
+    }
+    .heading {
+      font-family: $font_7, $font_8, $font_9, $font_10, $font_11;
+      font-size: 1.3em;
+      line-height: 1.3em;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: bold;
+    }
+  }
+  input[name="update_cart"] {
+    width: 265px !important;
+  }
+  label[for="rememberme"] {
+    position: absolute;
+    margin: 0 auto;
+    left: 1%;
+    right: 1%;
+    width: 100%;
+    text-align: center;
+    margin-top: -15px;
+    margin-left: -10px;
+  }
+  &.push-back-actions:not(.woocommerce-page) .actions {
+    right: 3% !important;
+  }
+  &.compact-menu .action:last-child {
+    margin-right: 0;
+  }
+  &.error404.no-hero #hero-wrapper {
+    height: 0 !important;
+  }
+  .product .item-hover:hover {
+    opacity: 1;
+  }
+  #customer_login input[name="login"] {
+    margin-bottom: 25px;
+  }
+  #shop-search .ss-cls-btn {
+    position: absolute;
+    top: 1%;
+    right: 3%;
+    font-size: 45px !important;
+    color: $white;
+    &:after {
+      height: 0;
+    }
+  }
+}
+article {
+  display: block;
+}
+aside {
+  display: block;
+}
+details {
+  display: block;
+}
+figcaption {
+  display: block;
+}
+figure {
+  display: block;
+  margin: 0;
+  &.avatar {
+    @extend %extend_22;
+  }
+}
+footer {
+  display: block;
+}
+header {
+  display: block;
+  &#header.hide-menu {
+    top: -300px;
+  }
+}
+hgroup {
+  display: block;
+}
+main {
+  display: block;
+}
+nav {
+  display: block;
+}
+section {
+  display: block;
+}
+summary {
+  display: block;
+}
+audio {
+  display: inline-block;
+  vertical-align: baseline;
+  vertical-align: middle;
+  &:not([controls]) {
+    display: none;
+    height: 0;
+  }
+}
+canvas {
+  display: inline-block;
+  vertical-align: baseline;
+  vertical-align: middle;
+}
+progress {
+  display: inline-block;
+  vertical-align: baseline;
+}
+video {
+  display: inline-block;
+  vertical-align: baseline;
+  vertical-align: middle;
+}
+[hidden] {
+  display: none;
+}
+template {
+  display: none;
+}
+a {
+  background: transparent;
+  @extend %extend_5;
+  outline: none !important;
+  &:active {
+    outline: 0;
+    color: $color_turbo_approx;
+    //Instead of the line below you could use @includetransition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: color 0.2s linear;
+  }
+  &:hover {
+    outline: 0;
+  }
+  &:visited {
+    @extend %extend_5;
+  }
+  &:focus {
+    color: $color_turbo_approx;
+    //Instead of the line below you could use @includetransition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: color 0.2s linear;
+    outline: none !important;
+  }
+  &.view-item-btn {
+    font-family: $font_7, $font_8, $font_9, $font_10, $font_11;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    width: 100%;
+    height: 125px;
+    display: block;
+    position: absolute;
+    clear: both;
+    bottom: 0;
+    background: $color_concrete_approx;
+    color: $color_mine_shaft_approx;
+    line-height: 125px;
+    text-align: center;
+    //Instead of the line below you could use @includetransition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: background 0.5s cubic-bezier(0.230, 1.000, 0.320, 1.000);
+  }
+  &.wc-button {
+    display: inline-block;
+    color: $black;
+  }
+}
+abbr[title] {
+  border: none;
+}
+b {
+  font-weight: bold;
+}
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+h1 {
+  font-size: 2em;
+  margin: .67em 0;
+  @extend %extend_3;
+}
+mark {
+  background: $yellow;
+  color: $black;
+}
+small {
+  font-size: 80%;
+}
+sub {
+  @extend %extend_1;
+  bottom: -0.25em;
+  vertical-align: bottom;
+}
+sup {
+  @extend %extend_1;
+  top: -0.5em;
+  vertical-align: top;
+}
+img {
+  border: 0;
+  vertical-align: middle;
+  &.rsImg {
+    max-width: none;
+  }
+}
+hr {
+  //Instead of the line below you could use @includebox-sizing($bs)
+  box-sizing: content-box;
+  height: 0;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid $color_celeste_approx;
+  margin: 1em 0;
+  padding: 0;
+}
+pre {
+  overflow: auto;
+  font-family: $font_6, $font_6;
+  font-size: 1em;
+}
+code {
+  font-family: $font_6, $font_6;
+  font-size: 1em;
+}
+kbd {
+  font-family: $font_6, $font_6;
+  font-size: 1em;
+}
+samp {
+  font-family: $font_6, $font_6;
+  font-size: 1em;
+}
+button {
+  @extend %extend_2;
+  overflow: visible;
+  text-transform: none;
+  cursor: pointer;
+  color: $color_log_cabin_approx;
+}
+input {
+  @extend %extend_2;
+  line-height: normal;
+  color: $color_log_cabin_approx;
+  @extend %extend_27;
+}
+optgroup {
+  @extend %extend_2;
+  font-weight: bold;
+}
+select {
+  @extend %extend_2;
+  text-transform: none;
+  color: $color_log_cabin_approx;
+  @extend %extend_27;
+}
+textarea {
+  @extend %extend_2;
+  overflow: auto;
+  resize: vertical;
+  color: $color_log_cabin_approx;
+  @extend %extend_27;
+}
+html {
+  color: $color_log_cabin_approx;
+  background-color: $white;
+  input[type="button"] {
+    cursor: pointer;
+  }
+  input[disabled] {
+    cursor: default;
+  }
+  &.img-full {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+  }
+  &.img-repeat {
+    background-repeat: repeat;
+    background-attachment: fixed;
+  }
+}
+input[type="reset"] {
+  cursor: pointer;
+}
+input[type="submit"] {
+  cursor: pointer;
+  border: none;
+  height: 40px;
+  position: static;
+  width: auto;
+}
+button[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input[type="checkbox"] {
+  //Instead of the line below you could use @includebox-sizing($bs)
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="radio"] {
+  //Instead of the line below you could use @includebox-sizing($bs)
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button {
+  height: auto;
+}
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  //Instead of the line below you could use @includebox-sizing($bs)
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button {
+}
+input[type="search"]::-webkit-search-decoration {
+}
+fieldset {
+  border: 1px solid $silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+legend {
+  border: 0;
+  padding: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid $color_gray_nurse_approx;
+  text-align: left;
+  &.variations {
+    .reset_variations {
+      display: inline-block;
+      margin-top: 5px;
+    }
+    td.label {
+      padding: 10px 15px 8px;
+    }
+    .reset_variations[style="visibility: hidden;"] {
+      display: none;
+    }
+  }
+  &.order_details {
+    max-width: 500px;
+    margin: 80px auto 0;
+    margin-top: 0;
+    th {
+      @extend %extend_66;
+      text-align: right;
+      width: 60%;
+    }
+    td {
+      @extend %extend_66;
+      color: $color_gunsmoke_approx;
+      width: 40%;
+    }
+    .order-total {
+      th {
+        color: $black;
+      }
+      td {
+        color: $color_trinidad_approx;
+      }
+    }
+    .product-quantity {
+      @extend %extend_69;
+    }
+    thead th {
+      @extend %extend_67;
+    }
+    tbody td {
+      @extend %extend_68;
+    }
+    tfoot th {
+      text-align: left;
+    }
+    .form-row.place-order {
+      margin-top: 50px;
+    }
+  }
+  &.shop_attributes {
+    margin: 0 0 10px 0;
+  }
+  thead {
+    h4 {
+      font-size: 10px;
+      line-height: 18px;
+      text-transform: uppercase;
+      margin-bottom: 0;
+    }
+    tr {
+      border-top: none;
+    }
+  }
+  tr {
+    border-top: 1px solid $color_gray_nurse_approx;
+  }
+  th {
+    @extend %extend_76;
+  }
+  td {
+    @extend %extend_76;
+  }
+  p {
+    margin: 0;
+  }
+}
+td {
+  padding: 0;
+  &.product-quantity {
+    width: 200px;
+    .quantity {
+      width: 140px;
+    }
+  }
+}
+th {
+  padding: 0;
+}
+::selection {
+  background-color: $color_gigas_approx;
+  color: $white;
+}
+::-moz-selection {
+  background-color: $color_gigas_approx;
+  color: $white;
+}
