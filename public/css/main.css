@@ -98,6 +98,14 @@
 	background-image: url(../img/law_ink1.png);
 }
 
+#slide-four .apps, #slide-two .books {
+	background-color: #80cbf0;
+}
+
+#slide-four .apps, #slide-four .books, #slide-four .apps p, #slide-four .books p {
+	color: #000;
+}
+
 .hero-text {
 	width: 60%;
 	margin: 0 auto;
