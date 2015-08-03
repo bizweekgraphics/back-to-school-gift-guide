@@ -8,6 +8,7 @@
     position: absolute;
     /*top: 0;
     z-index: -1;*/
+    background-color: #f1e6d2;
 }
 
 .slide-content-wrap {
@@ -55,24 +56,32 @@
 
 .hero-module {
 	background-repeat: no-repeat;
-	background-position: 0px 0px;
+	background-position: center;
 	background-size: contain;
-	min-height: 600px;
+	min-height: 700px;
 }
 
 #slide-one .hero-module {
-	background-image: url(../img/business_major.jpg);
+	background-image: url(../img/business_ink1.png);
 }
 
 #slide-two .hero-module {
-	background-image: url(../img/engineering_major.jpg);
+	background-image: url(../img/engineering_ink1.png);
+}
+
+#slide-two .apps, #slide-two .books {
+	background-color: #f5d38f;
+}
+
+#slide-two .apps, #slide-two .books, #slide-two .apps p, #slide-two .books p {
+	color: #000;
 }
 
 .hero-text {
-	width: 40%;
+	width: 60%;
 	margin: 0 auto;
-	padding-top: 50px;
-	text-align: left;
+	padding-top: 200px;
+	text-align: center;
 }
 
 .hero-text h1 {
@@ -80,7 +89,7 @@
 }
 
 .hero-text .dek {
-	text-align: left;
+	text-align: center;
 	padding: 0;
 }
 
@@ -97,12 +106,12 @@
 }
 
 .slide h3 {
-	font: 24px/32px 'HaasDisplayBold', Helvetica, Arial, sans-serif;
+	font: 22px/28px 'HaasDisplayBold', Helvetica, Arial, sans-serif;
 	margin-top: 0px;
 }
 
 .slide p {
-	font: 16px/26px 'TiemposTextWeb-Regular', Georgia, Times New Roman, serif;
+	font: 15px/24px 'TiemposTextWeb-Regular', Georgia, Times New Roman, serif;
 	color: #3c3c3c;
 }
 
@@ -110,10 +119,15 @@
 
 .apps {
 	width: 25%;
-	background-color: #ddd;
+	background-color: #f9827b;
 	padding: 0 30px;
 	float: left;
 	margin: 0 40px;
+	color: #fff;
+}
+
+.apps p, .books p {
+	color: #fff;
 }
 
 .apps img {
@@ -123,7 +137,7 @@
 }
 
 .product-list {
-	border-bottom: 1px solid #fff;
+	/*border-bottom: 1px solid #fff;*/
 	padding: 20px 0;
 	display: block;
 	clear: both;
@@ -182,9 +196,10 @@
 	float: right;
 }
 
-.wardrobe .main-item img {
+.wardrobe .main-item img, .gadgets .main-item img {
 	display: block;
 	padding-bottom: 20px;
+	max-width: 350px;
 }
 
 .wardrobe h3 {
@@ -237,7 +252,8 @@
 
 .books {
 	width: 25%;
-	background-color: #ddd;
+	background-color: #f9827b;
+	color: #fff;
 	padding: 0 30px;
 	float: right;
 	margin: 60px 0 0 40px;
