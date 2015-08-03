@@ -61,6 +61,15 @@
 	min-height: 700px;
 }
 
+#slide-zero img {
+	width: 24%;
+}
+
+#slide-zero h1 {
+	font: 55px/60px 'HaasDisplayBold', Helvetica, Arial, sans-serif;
+	text-align: center;
+}
+
 #slide-one .hero-module {
 	background-image: url(../img/business_ink1.png);
 }
@@ -75,6 +84,18 @@
 
 #slide-two .apps, #slide-two .books, #slide-two .apps p, #slide-two .books p {
 	color: #000;
+}
+
+#slide-three .hero-module {
+	background-image: url(../img/english_ink1.png);
+}
+
+#slide-three .apps, #slide-two .books {
+	background-color: #ff7979;
+}
+
+#slide-four .hero-module {
+	background-image: url(../img/law_ink1.png);
 }
 
 .hero-text {
@@ -207,13 +228,13 @@
 }
 
 .wardrobe .sidebar {
-	width: 40%;
+	width: 44%;
 	float: left;
 	margin-right: 40px;
 }
 
 .wardrobe .sidebar .product-text {
-	width: 45%;
+	width: 54%;
 	float: right;
 }
 
@@ -233,7 +254,7 @@
 }
 
 .gadgets .sidebar {
-	width: 40%;
+	width: 44%;
 	float: right;
 }
 
@@ -244,7 +265,7 @@
 }
 
 .gadgets .sidebar .product-text {
-	width: 45%;
+	width: 54%;
 	float: left;
 }
 
